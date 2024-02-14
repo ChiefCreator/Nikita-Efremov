@@ -1,0 +1,50 @@
+.header{
+    height: auto;
+    position: relative;
+    &__swiper{
+        height: auto;
+        width: 100%;
+    }
+    &__content{
+        position: absolute;
+        z-index: 9;
+        top:30px;
+        left: 70px;
+        right: 70px;
+        bottom: 20px;
+        pointer-events: none;
+    }
+    &__nav{
+        pointer-events: all;
+    }
+    &__bottom{
+        position: absolute;
+        z-index: 9;
+        bottom:30px;
+        left: 0;
+        pointer-events: none;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    &__social{
+        position: absolute;
+        left: 0;
+        top:50%;
+        transform: translateY(-50%);
+        pointer-events: all;
+    }
+    &__controls{
+        pointer-events: all;
+    }
+    &__pagination{
+        pointer-events: all;
+        position: absolute;
+        left: auto;
+        top:auto;
+        right: 0;
+        top:50%;
+        transform: translateY(-50%) !important;
+    }
+}

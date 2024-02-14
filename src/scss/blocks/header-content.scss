@@ -1,0 +1,145 @@
+.social-header{
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &_link{
+        transition: color .3s ease;
+    }
+    &__link::before{
+        @include font-awesome;
+        font-size: 20px;
+        color: rgb(215, 213, 213);
+    }
+    &__link_inst::before{
+        content: "\f16d";
+    }
+    &__link_facebook::before{
+        content: "\f09a";
+    }
+    &__link_twitter::before{
+        content: "\f099";
+    }
+}
+.social-header__link:hover::before{
+    color: rgb(255, 255, 255);
+}
+.controls-header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 0 0 100px;
+    &__buttons{
+        display: flex;
+        gap: 20px;
+    }
+    &__button{
+        flex: 1 1 40px;
+        height: 40px;
+        background-color: rgba(139, 139, 139, 0.3);
+        backdrop-filter: blur(2px);
+        cursor: pointer;
+        transition: transform .3s ease;
+        &::before{
+            @include font-awesome;
+            font-size: 23px;
+            color: white;
+        }
+        &_next::before{
+            content: "\f061";
+        }
+        &_prev::before{
+            content: "\f060";
+        }
+        &:active{
+            transform: scale(.9);
+        }
+    }
+}
+.fraction-header{
+    &__p{
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        font-weight: 500;
+    }   
+    &__current{
+        color: white;
+        font-size: 35px;
+    }
+    &__all{
+        color: $main-color;
+        font-size: 25px;
+    }
+}
+.advantages-header{
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3,4fr);
+        gap: 20px;
+    }
+    &__item{
+        padding: 20px;
+        background-color: rgba(139, 139, 139, 0.3);
+        backdrop-filter: blur(2px);
+    }
+    &__num{
+        font-size: 30px;
+        color: $main-color;
+        font-weight: 500;
+    }
+    &__text{
+        color: white;
+        font-size: 20px;
+    }
+}
+.pagination-header{
+    position: static !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .swiper-pagination-bullet{
+        flex: 1 1 60px;
+        width: 3px;
+        border-radius: 0;
+        margin: 0 !important;
+        background-color: $muted-light-bg;
+        opacity: 1;
+        position: relative;
+        transition: flex .3s ease;
+        &::before{
+            content: "";
+            position: absolute;
+            top:0px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $main-bg;
+            opacity: 0;
+        }
+        &::after{
+            content: "";
+            display: block;
+            width: 3px;
+            height: 0;
+            background-color: $main-bg;
+        }
+        &-active{
+            flex: 1 1 80px;
+            &::before{
+                opacity: 1;
+                top: 100%;
+                transition: top 10s ease;
+            }
+            &::after{
+                transition: height 10s ease;
+                height: 100%;
+            }
+        }
+    }
+}

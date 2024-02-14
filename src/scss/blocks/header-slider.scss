@@ -1,0 +1,68 @@
+.swiper-header{
+    &__wrapper{
+
+    }
+    &__slide{
+        min-height: 100vh;
+    }
+}
+.header-slide{
+    padding: 80px 180px 200px 180px;
+    &__content{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &_first{
+        background-image: url("../img/header-bg-1-dark.jpg");
+        background-position: 0 20%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &_second{
+        background-image: url("../img/header-bg-2.jpg");
+        background-position: 0 20%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__head{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__title{
+        display: flex;
+        flex-direction: column;
+        font-size: 70px;
+        letter-spacing: 10px;
+    }
+    &__title-left{
+        color: white;
+    }
+    &__title-right{
+        margin-left: 300px;
+        color: $main-color;
+    }
+    &__text{
+        margin-top: 30px;
+        max-width: 450px;
+        font-size: 22px;
+        color: white;
+        display: flex;
+        &::before{
+            content: "";
+            display: inline-block;
+            flex: 0 0 70px;
+            height: 1.5px;
+            background-color: $muted-light-bg;
+            margin-right: 10px;
+            margin-top: 15px;
+        }
+        &_first::before{
+            flex: 0 0 40px;
+        }
+    }
+    &__button{
+        margin-top: 50px;
+    }
+}
