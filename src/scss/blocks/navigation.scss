@@ -37,20 +37,6 @@
         }
     }
     &__btn{
-        padding: 10px 25px;
-        border: 2px solid white;
         margin-left: auto;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        background-color: rgba(139, 139, 139, 0.3);
-        backdrop-filter: blur(2px);
-        transition: transform .3s ease, background-color .3s ease;
-        &:active{
-            transform: scale(.95);
-        }
-        &:hover{
-            background-color: rgba(104, 104, 104, 0.3);
-        }
     }
 }
