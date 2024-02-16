@@ -1,0 +1,206 @@
+.plan{
+    padding-top: 100px;
+    &__head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    &__title{
+        color: rgb(8, 8, 15);
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+    &__body{
+        display: flex;
+        gap: 100px;
+        margin-top: 50px;
+    }
+    &__img-wrapper{
+        flex: 0 0 450px;
+        height: 550px;
+        position: relative;
+    }
+    &__img{
+        box-shadow: 0 5px 20px rgba(3, 2, 2, .6);
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 0 20%;
+        }
+    }
+}
+.controls-plan{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &__button{
+        width: 40px;
+        height: 40px;
+        background-color: rgba(139, 139, 139, 0.3);
+        backdrop-filter: blur(2px);
+        cursor: pointer;
+        transition: transform .3s ease;
+        &::before{
+            @include font-awesome;
+            font-size: 23px;
+            color: white;
+        }
+        &_next::before{
+            content: "\f061";
+        }
+        &_prev::before{
+            content: "\f060";
+        }
+        &:active{
+            transform: scale(.9);
+        }
+    }
+}
+.road{
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr auto 1fr auto;
+    align-items: center;
+    &__circle{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $muted-light-color;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before{
+            @include font-awesome;
+            color: white;
+            font-size: 35px;
+            position: relative;
+            z-index: 2;
+        }
+        &_act{
+            .road__circle-bg{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        &_delay-plus{
+            .road__circle-bg{
+                transition-delay: .5s;
+            }
+        }
+        &_delay-minus{
+            .road__circle-bg{
+                transition-delay: 0;
+            }
+        }
+    }
+    .circle-1::before{
+        content: "\f2b5";
+    }
+    .circle-2::before{
+        content: "\e4bd";
+    }
+    .circle-3::before{
+        content: "\f030";
+    }
+    .circle-4::before{
+        content: "\f03e";
+    }
+    &__circle-bg{
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transform: scale(0);
+        display: block;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        transition: all .5s ease;
+    }
+    &__line{
+        width: 100%;
+        height: 4px;
+        background-color: $muted-light-color;
+        backdrop-filter: blur(2px);
+        &_act{
+            .road__line-bg{
+                width: 100%;
+            }
+        }
+        &_delay-plus{
+            .road__line-bg{
+                transition-delay: .5s;
+            }
+        }
+    }
+    &__line-bg{
+        display: block;
+        width: 0;
+        height: 100%;
+        background-color: red;
+        transition: all .5s ease;
+    }
+}
+.tabs{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    &__item{
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        transition: all .5s ease;
+        position: absolute;
+        top:0;
+        left: -100%;
+        &_act{
+            left: 0;
+            .tabs__title{
+                opacity: 1;
+            }
+            .tabs__text{
+                opacity: 1;
+            }
+            .tabs__index{
+                opacity: 1;
+            }
+        }
+    }
+    &__title{
+        color: $dark-color;
+        font-family: 500;
+        font-size: 45px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+        opacity: 0;
+        transition: all 1s ease;
+        transition-delay: .3s;
+    }
+    &__text{
+        max-width: 500px;
+        font-size: 17px;
+        opacity: 0;
+        transition: all 1s ease;
+        transition-delay: .3s;
+    }
+    &__index{
+        margin-top: auto;
+        margin-left: auto;
+        color: $main-color;
+        font-weight: 500;
+        font-size: 80px;
+        opacity: 0;
+        transition: all 1s ease;
+        transition-delay: .3s;
+    }
+}
