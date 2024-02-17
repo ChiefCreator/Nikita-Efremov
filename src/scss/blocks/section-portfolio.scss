@@ -1,0 +1,44 @@
+.portfolio{
+    margin-top: 100px;
+    padding: 150px 0;
+    background-image: url("./../../img/section-portfolio-1.jpg");
+    background-position: 0 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(4,3fr);
+        gap: 60px 0;
+        grid-template-rows: repeat(2, 200px);
+        @media (max-width:1260px) {
+            grid-template-columns: repeat(3,4fr);
+            grid-template-rows: repeat(3, 200px);
+        }
+        @media (max-width:1050px) {
+            grid-template-columns: repeat(2,6fr);
+            grid-template-rows: repeat(4, 200px);
+        }
+        @media (max-width:820px) {
+            grid-template-columns: 12fr;
+            grid-template-rows: repeat(8, 200px);
+        }
+    }
+}
+.card-portfolio{
+    background-color: transparent;
+    transition: all .3s ease;
+    cursor: pointer;
+    display: flex;
+    &__title{   
+        text-align: center;
+        margin: auto auto;
+        font-size: 30px;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+    }   
+    &:hover{
+        background-color: rgba(197, 197, 197, 0.3);
+        backdrop-filter: blur(2px);
+    }
+}
