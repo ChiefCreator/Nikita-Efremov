@@ -1,11 +1,16 @@
 .portfolio{
     margin-top: 100px;
-    padding: 150px 0;
-    background-image: url("./../../img/section-portfolio-1.jpg");
-    background-position: 0 20%;
-    background-repeat: no-repeat;
-    background-size: cover;
     color: white;
+    &__title{
+        margin-bottom: 50px;
+    }
+    &__bg{
+        background-image: url("./../../img/section-portfolio-1.jpg");
+        background-position: 0 20%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 150px 0;
+    }
     &__wrapper{
         display: grid;
         grid-template-columns: repeat(4,3fr);

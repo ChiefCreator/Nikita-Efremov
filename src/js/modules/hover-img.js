@@ -1,5 +1,5 @@
 function hoverImg() {
-    const bg = document.querySelector(".portfolio");
+    const bg = document.querySelector(".portfolio__bg");
     const portfolioCards = document.querySelectorAll(".card-portfolio");
 
     portfolioCards.forEach(portfolioCard => {
