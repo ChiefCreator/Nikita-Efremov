@@ -1,7 +1,10 @@
 .portfolio{
     margin-top: 100px;
     color: white;
-    &__title{
+    &__head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin-bottom: 50px;
     }
     &__bg{
