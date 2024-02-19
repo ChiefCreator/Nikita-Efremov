@@ -46,8 +46,11 @@
         .button-order__btn{
             background-color: white;
             backdrop-filter: none;
-            border: 2px solid $muted-light-bg;
-            color: $muted-light-bg;
+            border: 2px solid black;
+            color: black;
+        }
+        .circle-text{
+            fill:rgb(23, 23, 23);
         }
     }
 }

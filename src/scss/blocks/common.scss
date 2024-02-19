@@ -81,6 +81,10 @@
     &__path{
         fill: none;
     }
+    &__path{
+        transform-origin: center;
+        transform: rotate(30deg);
+    }
 }
 .dropdown-select{
     position: relative;
