@@ -6,6 +6,20 @@ const dropdownList = document.querySelector(".dropdown-select__list")
 const dropdownListItems =  document.querySelectorAll(".dropdown-select__item")
 const dropdownInput = document.querySelector(".dropdown-select__input")
 
+if (localStorage.getItem("portfolio")) {
+    dropdownButton.textContent = document.querySelector(`[data-value='${localStorage.getItem("portfolio")}']`).textContent
+    dropdownInput.value = localStorage.getItem("portfolio")
+
+    let imgs = document.querySelectorAll(".gallery__item");
+        imgs.forEach(img => {
+            img.classList.add("gallery__item_hidden");
+            if (img.dataset.category && img.dataset.category.includes(localStorage.getItem("portfolio"))) {
+                img.classList.remove("gallery__item_hidden");
+            }
+            if (localStorage.getItem("portfolio") && localStorage.getItem("portfolio") == "all") img.classList.remove("gallery__item_hidden");
+        })
+}
+
 dropdownButton.addEventListener("click", function() {
     dropdownGrid.classList.toggle("dropdown-select__grid_visible")
     dropdownList.classList.toggle("dropdown-select__list_visible")
