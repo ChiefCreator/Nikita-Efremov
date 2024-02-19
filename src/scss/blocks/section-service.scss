@@ -17,9 +17,12 @@
     &__body{
         flex: 1 1 50%;
         background-color: #A52019;
-        padding: 50px;
+        padding: 50px 50px 50px 70px;
         display: flex;
         flex-direction: column;
+        @media (min-width:1650px) {
+            padding: 50px;
+        }
         &_orange{
             background-color: orange;
         }
