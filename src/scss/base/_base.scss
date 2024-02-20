@@ -1,8 +1,12 @@
 html{
     scroll-behavior: smooth;
 }
-body{
+.body{
     font-family: $main-font;
+    background-color: rgb(44, 45, 50);
+    &_white{
+        background-color: white;
+    }
 }
 .container{
     max-width: 1590px;

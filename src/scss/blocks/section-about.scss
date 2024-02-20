@@ -38,19 +38,19 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        color: rgb(8, 8, 15);
+        color: $light-color;
         font-size: 17px;
     }
     &__button-order{
         margin-top: 50px;
         .button-order__btn{
-            background-color: white;
+            background-color: rgb(44, 45, 50);
             backdrop-filter: none;
-            border: 2px solid black;
-            color: black;
+            border: 2px solid $light-color;
+            color: $light-color;
         }
         .circle-text{
-            fill:rgb(23, 23, 23);
+            fill:$light-color;
         }
     }
 }
