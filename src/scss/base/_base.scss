@@ -10,14 +10,20 @@ html{
 }
 .container{
     max-width: 1590px;
-    padding: 0 70px;
+    padding: 0 30px;
     margin: 0 auto;
     &_change{
         max-width: 100%;
         padding: 0;
         @media (min-width:1650px) {
             max-width: 1590px;
-            padding: 0 70px;
+            padding: 0 30px;
         }
     }
+}
+.hide{
+    display: none;
+    opacity: 0;
+    visibility: 0;
+    pointer-events: none;
 }

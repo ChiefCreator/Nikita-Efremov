@@ -102,7 +102,7 @@
     gap: 20px;
     .swiper-pagination-bullet{
         flex: 1 1 60px;
-        width: 3px;
+        width: 2px;
         border-radius: 0;
         margin: 0 !important;
         background-color: $muted-light-bg;
@@ -125,7 +125,7 @@
         &::after{
             content: "";
             display: block;
-            width: 3px;
+            width: 2px;
             height: 0;
             background-color: $main-bg;
         }
@@ -134,10 +134,10 @@
             &::before{
                 opacity: 1;
                 top: 100%;
-                transition: top 10s ease;
+                transition: top 15s linear;
             }
             &::after{
-                transition: height 10s ease;
+                transition: height 15s linear;
                 height: 100%;
             }
         }

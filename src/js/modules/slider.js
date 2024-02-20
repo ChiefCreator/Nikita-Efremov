@@ -11,7 +11,7 @@ function slider() {
           type: 'bullets',
         },
         autoplay: {
-          delay: 10000,
+          delay: 15000,
           disableOnInteraction: false
       },
       parallax:true,
