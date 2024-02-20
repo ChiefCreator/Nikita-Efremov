@@ -1,5 +1,5 @@
 function slider() {
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.swiper-header', {
         speed: 600,
         spaceBetween: 0,
         navigation: {
@@ -33,6 +33,32 @@ function slider() {
         }
     }
     });
+
+    const swiperRewiews = new Swiper('.rewiews-swiper', {
+      speed: 600,
+      spaceBetween: 20,
+      navigation: {
+          nextEl: '.controls-rewiews__button_next',
+          prevEl: '.controls-rewiews__button_prev',
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    },
+    parallax:true,
+    pagination: {
+      el: '.rewiews-swiper__bullets',
+      type: 'bullets',
+    },
+    on: {
+      init: function(swiper) {
+          swiper.pagination.bullets[0].classList.remove("swiper-pagination-bullet-active");
+          setTimeout(function() {
+            swiper.pagination.bullets[0].classList.add("swiper-pagination-bullet-active");
+          },0)
+      },
+  }
+  });
 }
 
 export default slider;
