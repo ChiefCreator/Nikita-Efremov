@@ -11,30 +11,11 @@
 .service-block{
     display: flex;
     height: 550px;
-    &_reverse{
-        flex-direction: row-reverse;
-    }
     &__body{
-        flex: 1 1 50%;
-        background-color: #A52019;
-        padding: 50px 50px 50px 30px;
+        flex:  0 0 40%;
+        padding: 50px 50px 50px 0;
         display: flex;
         flex-direction: column;
-        @media (min-width:1650px) {
-            padding: 50px;
-        }
-        &_orange{
-            background-color: orange;
-        }
-        &_gray{
-            background-color: rgb(73, 67, 54);
-        }
-        &_blue{
-            background-color: rgb(18, 18, 128);
-        }
-        &_dark{
-            background-color: rgb(2, 2, 19);
-        }
         &_act{
             .service-block__content_first{
                 height: 0;
@@ -68,9 +49,11 @@
     &__title{
         flex: 1 1 auto;
         color: $light-color;
-        font-size: 35px;
-        letter-spacing: 5px;
+        font-size: 29px;
+        letter-spacing: 3px;
         text-transform: uppercase;
+        text-wrap: wrap;
+        word-break: break-all;
     }
     &__icon{
         flex: 0 0 40px;
@@ -97,12 +80,44 @@
             margin-bottom: 20px;
         }
     }
+    &__line{
+        border-right: 2px solid rgb(127, 127, 138);
+        border-left: 2px solid rgb(127, 127, 138);
+        width: 100%;
+        height: 100%;
+    }
     &__img{
-        flex: 1 1 50%;
+        flex: 1 1 60%;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+        position: relative;
         img{
-            width: 100%;
-            height: 100%;
+            position: absolute;
+            left: 1.5px;
+            top:50%;
+            transform: translate(0,-50%);
+            width: calc(75% - 10.5px);
+            height: 400px;
         }
+        &_reverse{
+            img{
+                position: absolute;
+                left: calc(25% + 9px);
+                top:50%;
+                transform: translate(0,-50%);
+                width: calc(75% - 10.5px);
+                height: 400px;
+            }
+        }
+    }
+    &__num{
+        display: block;
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
+        color: rgb(127, 127, 138);
+        font-size: 20px;
     }
     &__footer{
         margin-top: auto !important;
