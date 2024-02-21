@@ -9,3 +9,13 @@ road();
 
 import hoverImg from "./modules/hover-img";
 hoverImg();
+
+import feedback from "./modules/feedback";
+feedback();
+
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
+
+new AirDatepicker('#date', {
+    inline: true
+})

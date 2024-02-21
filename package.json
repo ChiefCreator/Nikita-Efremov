@@ -26,5 +26,10 @@
     "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.70.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "air-datepicker": "^3.4.0",
+    "css-loader": "^6.10.0",
+    "style-loader": "^3.3.4"
   }
 }

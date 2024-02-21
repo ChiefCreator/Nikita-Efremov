@@ -659,6 +659,84 @@
         </div>
     </div>
 </section>
+        <section class="feedback">
+    <div class="container">
+        <header class="feedback__head">
+            <h2 class="feedback__title section-title">Обратная связь</h2>
+            <div class="feedback__change-form change-form">
+                <span class="change-form__title change-form__title_active">Забронировать</span>
+                <span class="change-form__title">Спросить</span>
+                <div class="change-form__line"></div>
+            </div>
+        </header>
+        <div class="feedback__wrapper">
+            <div class="feedback__content">
+                <form class="feedback__form form-feedback form-feedback_first">
+                    <h3 class="form-feedback__title">Забронируй съемку</h3>
+                    <div class="form-feedback__body">
+                        <div class="form-feedback__content">
+                            <div class="input-container">
+                                <div class="input-container__icon"></div>
+                                <div class="input-container__wrapper">
+                                    <input class="input-container__input" required>
+                                    <label class="input-container__label">Введите имя</label>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-container__icon input-container__icon_tel"></div>
+                                <div class="input-container__wrapper">
+                                    <input class="input-container__input" required>
+                                    <label class="input-container__label">Введите номер</label>
+                                </div>
+                            </div>
+                            <div class="form-feedback__calendar">
+                                <input class="date" id="date">
+                            </div>
+                            <button class="form-feedback__button button">Заказать cъемку</button>
+                        </div>
+                    </div>
+                </form>
+                <form class="feedback__form form-feedback form-feedback_second">
+                    <h3 class="form-feedback__title">Задай вопрос</h3>
+                    <div class="form-feedback__body">
+                        <div class="form-feedback__content">
+                            <div class="input-container">
+                                <div class="input-container__icon"></div>
+                                <div class="input-container__wrapper">
+                                    <input class="input-container__input" required>
+                                    <label class="input-container__label">Введите имя</label>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-container__icon input-container__icon_tel"></div>
+                                <div class="input-container__wrapper">
+                                    <input class="input-container__input" required>
+                                    <label class="input-container__label">Введите номер</label>
+                                </div>
+                            </div>
+                            <div class="textarrea-container">
+                                <textarea class="textarrea-container__textarrea" required></textarea>
+                                <label class="textarrea-container__label">Введите сообщение</label>
+                            </div>
+                            <button class="form-feedback__button button">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="feedback__photo-wrapper">
+                <div class="feedback__photo">
+                    <img src="./../../img/gallery-7.jpg">
+                </div>
+                <svg class="feedback__circle-text circle-text" viewBox="0 0 150 150">
+                    <path class="circle-text__path" id="circle-text" d="M 0,150 a 150,150 0 1,1 0,1 z" />
+                    <text>
+                      <textPath xlink:href="#circle-text">Nikita Efremov Nikita</textPath>
+                    </text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/index.bundle.js"></script>
