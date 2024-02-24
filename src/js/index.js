@@ -5,7 +5,7 @@ import popUpToggle from "./modules/open-pop-up";
 popUpToggle();
 
 import serviceItemCost from "./modules/service-item-price";
-serviceItemCost(dataService);
+serviceItemCost();
 
 import road from "./modules/road";
 road();
