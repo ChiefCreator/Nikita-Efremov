@@ -7,6 +7,9 @@ html{
     &_white{
         background-color: white;
     }
+    &_lock{
+        overflow: hidden;
+    }
 }
 .container{
     max-width: 1590px;
