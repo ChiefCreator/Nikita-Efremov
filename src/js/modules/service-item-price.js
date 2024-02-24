@@ -1,27 +1,11 @@
 function serviceItemCost() {
 
-    function toggleCostBlock() {
-        let serviceBodies = document.querySelectorAll(".service-block__body");
-        serviceBodies.forEach(serviceBody => {
-            let btnPrice = serviceBody.querySelector(".service-block__button");
-            let closeBtn = serviceBody.querySelector(".service-block__icon");
-
-            btnPrice.addEventListener("click", function() {
-                serviceBody.classList.add("service-block__body_act");
-            })
-            closeBtn.addEventListener("click", function() {
-                console.log(closeBtn)
-                serviceBody.classList.remove("service-block__body_act");
-            })
-        })
-    }
-    toggleCostBlock()
-
-    document.querySelectorAll(".service__item").forEach(serviceItem => {
+    document.querySelectorAll(".main-form").forEach(serviceItem => {
         let total = 0;
         let cost1 = 0;
         let cost2 = 0;
         let cost3 = 0;
+        let cost4 = 0;
         
         serviceItem.querySelectorAll(".dropdown-select").forEach(function(dropdownWrapper) {
 
@@ -55,7 +39,11 @@ function serviceItemCost() {
                         dropdownInput.value = item.dataset.value;
                         cost3 = +dropdownInput.value;
                     }
-                    calcTotal(cost1, cost2, cost3);
+                    else if(item.dataset.identificator == "item4") {
+                        dropdownInput.value = item.dataset.value;
+                        cost4 = +dropdownInput.value;
+                    }
+                    calcTotal(cost1, cost2, cost3, cost4);
                 })
             })
     
@@ -72,8 +60,8 @@ function serviceItemCost() {
             }
     
             function calcTotal(cost1,cost2) {
-              total = cost1 + cost2 + cost3;
-              serviceItem.querySelector(".service-block__price-num").textContent = total
+              total = cost1 + cost2 + cost3 + cost4;
+              serviceItem.querySelector(".total__cost").textContent = total
             }
         })
     })

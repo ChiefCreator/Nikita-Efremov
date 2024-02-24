@@ -1,0 +1,275 @@
+.main-form{
+    width: 500px;
+    height: auto;
+    min-height: 100%;
+    background-color: rgb(70, 71, 75);
+    display: flex;
+    flex-direction: column;
+    &__head{
+        border-bottom: 2px solid $light-color;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title{
+        margin-left: 20px;
+        font-size: 25px;
+        color: white;
+    }
+    &__close{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        cursor: pointer;
+        &::before{
+            content: "\f00d";
+            @include font-awesome;
+            font-size: 30px;
+            color: white;
+        }
+    }
+    &__body-wrapper{
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    &__body{
+        height: 100%;
+        width: 100%;
+        transition: all .7s ease;
+        background-color: rgb(70, 71, 75);
+        padding: 30px 20px;
+        &_ask{
+            position: absolute;
+            top:100%;
+            z-index: 2;
+        }
+        &_send{
+            position: absolute;
+            top:100%;
+            z-index: 3;
+        }
+        &_act{
+            top:0;
+        }
+    }
+    &__sub-title{
+        margin-bottom: 20px;
+        color: white;
+        font-size: 23px;
+    }
+    &__inp-text{
+        color: white;
+        margin-bottom: 5px;
+    }
+    &__select-wrapper{
+        margin-bottom: 15px;
+    }
+    &__footer{
+        margin-top: auto;
+    }
+    &__calendar{
+        .air-datepicker{
+            background: rgb(44, 45, 50) !important;
+            border: 2px solid rgb(72, 72, 73) !important;
+            color: $light-color !important;
+            width: 100% !important;
+            border-radius: 0 !important;
+            .air-datepicker-nav{
+                border-bottom: 2px solid rgb(72, 72, 73) !important;
+            }
+            .air-datepicker-body--day-name{
+                color: $main-color;
+            }
+            .air-datepicker-cell.-day-.-other-month-{
+                color: rgb(72, 72, 73);
+            }
+            .air-datepicker-cell.-selected-{
+                background: $main-bg;
+            }
+            .air-datepicker-cell.-selected-.-focus-{
+                background-color: $main-bg;
+            }
+            .air-datepicker-cell.-focus-{
+                background-color: rgb(72, 72, 73);
+            }
+            .air-datepicker-cell.-current- {
+                color: $main-color;
+            }
+            .air-datepicker-cell.-selected-.-current- {
+                color: $light-color;
+                background: $main-bg;
+            }
+            .air-datepicker-cell.-current-.-focus-{
+                color: $light-color;
+            }
+            .air-datepicker-nav--action:hover {
+                background: rgb(72, 72, 73);
+            }
+            .air-datepicker-nav--title:hover{
+                background: rgb(72, 72, 73);
+            }
+        }
+    }
+}
+.total{
+    &__text{
+        font-size: 18px;
+        color: white;
+    }
+    &__cost{
+        font-size: 30px;
+        color: $main-color;
+    }
+}
+.footer-main-form{
+    padding: 20px 20px;
+    display: grid;
+    grid-template-columns: 70px 90px 70px 90px 70px;
+    align-items: center;
+    justify-content: center;
+    &__circle{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 3.5px solid rgba(139, 139, 139, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        &_act{
+            border: 3.5px solid $main-bg;
+            .footer-main-form__circle-bg{
+                transform: translate(-50%,-50%) scale(2);
+            }
+        }
+    }
+    &__index{
+        color: white;
+        font-size: 25px;
+        position: relative;
+        z-index: 2;
+    }
+    &__line{
+        width: 90px;
+        height: 3.5px;
+        background-color: rgba(139, 139, 139, 0.3);
+        position: relative;
+    }
+    &__line-bg{
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 0;
+        height: 100%;
+        transition: all .3s ease;
+        background-color: $main-bg;
+        &_act{
+            width: 100%;
+        }
+    }
+    &__circle-bg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0);
+        width: 50%;
+        height: 50%;
+        background-color: $main-bg;
+        border-radius: 50%;
+        transition: all .5s ease;
+    }
+}
+.input-container-form{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    border: 2px solid rgb(72, 72, 73);
+    gap: 10px;
+    background-color: rgb(44, 45, 50);
+    &_mb{
+        margin-bottom: 20px;
+    }
+    &__icon{
+        flex: 0 0 40px;
+        height: 100%;
+        border-right: 2px solid rgb(72, 72, 73);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before{
+            content: "\f007";
+            @include font-awesome;
+            font-size: 18px;
+            color: $light-color;
+        }
+        &_tel::before{
+            content: "\f095";
+
+        }
+    }
+    &__wrapper{
+        flex: 1 1 100%;
+        height: 100%;
+        position: relative;
+    }
+    &__input{
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        color: $light-color;
+        &:focus + .input-container-form__label, &:valid + .input-container-form__label{
+            top: -1px;
+            left: 10px;
+            font-size: 12px;
+        }
+    }
+    &__label{
+        background-color: rgb(44, 45, 50);
+        padding: 0 3px;
+        color: $light-color;
+        position: absolute;
+        top:50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 14px;
+        transition: all .3s ease;
+    }
+}
+.textarrea-container-form{
+    width: 100%;
+    height: 150px;
+    border: 2px solid rgb(72, 72, 73);
+    position: relative;
+    background-color: rgb(44, 45, 50);
+    &__textarrea{
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        resize: none;
+        color: $light-color;
+        padding-top: 7px;
+        &:focus + .textarrea-container-form__label, &:valid + .textarrea-container-form__label{
+            top: -8px;
+            left: 10px;
+            font-size: 12px;
+        }
+    }
+    &__label{
+        position: absolute;
+        left: 2px;
+        top:7px;
+        background-color: rgb(44, 45, 50);
+        padding: 0 3px;
+        color: $light-color;
+        font-size: 14px;
+        transition: all .3s ease;
+    }
+}

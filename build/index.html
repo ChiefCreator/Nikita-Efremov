@@ -12,6 +12,140 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="body">
+    <div class="over"></div>
+    <div class="pop-up">
+        <form class="pop-up__main-form main-form">
+    <header class="main-form__head">
+        <h4 class="main-form__title">Обратная связь</h4>
+        <span class="main-form__close"></span>
+    </header>
+    <div class="main-form__body-wrapper">
+        <div class="main-form__body main-form__body_calculation" id="circ-1">
+            <h5 class="main-form__sub-title">Рассчитайте стоимость</h5>
+            <div class="main-form__select-wrapper">
+                <p class="main-form__inp-text">Выберите услугу</p>
+                <div class="dropdown-select">
+                    <button class="dropdown-select__button" data-lang="switch-lang" type="button">Вид услуги</button>
+                    <div class="dropdown-select__grid">
+                        <ul class="dropdown-select__list">
+                            <li class="dropdown-select__item" data-value="20" data-identificator="item1">Прогулка</li>
+                            <li class="dropdown-select__item" data-value="20" data-identificator="item1">Lifestyle</li>
+                            <li class="dropdown-select__item" data-value="10" data-identificator="item1">Индивидуальная съемка</li>
+                            <li class="dropdown-select__item" data-value="30" data-identificator="item1">Групповая фотоссесия</li>
+                            <li class="dropdown-select__item" data-value="10" data-identificator="item1">Портретная съемка</li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown-select__input">
+                    </div>
+                </div>
+            </div> 
+            <div class="main-form__select-wrapper">
+                <p class="main-form__inp-text">Выберите время съемки</p>
+                <div class="dropdown-select">
+                    <button class="dropdown-select__button" data-lang="switch-lang" type="button">Время съемки</button>
+                    <div class="dropdown-select__grid">
+                        <ul class="dropdown-select__list">
+                            <li class="dropdown-select__item" data-value="50" data-identificator="item2">1 час</li>
+                            <li class="dropdown-select__item" data-value="90" data-identificator="item2">2 часа</li>
+                            <li class="dropdown-select__item" data-value="130" data-identificator="item2">3 часа</li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown-select__input">
+                    </div>
+                </div>
+            </div>  
+            <div class="main-form__select-wrapper">
+                <p class="main-form__inp-text">Выберите кол-во фотографий в обработке</p>
+                <div class="dropdown-select">
+                    <button class="dropdown-select__button" data-lang="switch-lang" type="button">Кол-во фотографий в обработке</button>
+                    <div class="dropdown-select__grid">
+                        <ul class="dropdown-select__list">
+                            <li class="dropdown-select__item" data-value="20" data-identificator="item3">20</li>
+                            <li class="dropdown-select__item" data-value="30" data-identificator="item3">30</li>
+                            <li class="dropdown-select__item" data-value="50" data-identificator="item3">50</li>
+                            <li class="dropdown-select__item" data-value="10" data-identificator="item3">10</li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown-select__input">
+                    </div>
+                </div>
+            </div>  
+            <div class="main-form__select-wrapper">
+                <p class="main-form__inp-text">Выберите исходники</p>
+                <div class="dropdown-select">
+                    <button class="dropdown-select__button" data-lang="switch-lang" type="button">Исходники</button>
+                    <div class="dropdown-select__grid">
+                        <ul class="dropdown-select__list">
+                            <li class="dropdown-select__item" data-value="0" data-identificator="item4">Нет</li>
+                            <li class="dropdown-select__item" data-value="5" data-identificator="item4">Да</li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown-select__input">
+                    </div>
+                </div>
+            </div>   
+            <div class="main-form__total total">
+                <p class="total__text">Итого: <span class="total__cost">0</span> рублей</p>
+            </div>
+        </div>
+        <div class="main-form__body main-form__body_ask" id="circ-2">
+            <h5 class="main-form__sub-title">Задайте вопрос (необязательно)</h5>
+            <div class="textarrea-container-form">
+                <textarea class="textarrea-container-form__textarrea" required></textarea>
+                <label class="textarrea-container-form__label">Введите сообщение</label>
+            </div>
+        </div>
+        <div class="main-form__body main-form__body_send" id="circ-3">
+            <h5 class="main-form__sub-title">Забронируй съемку</h5>
+            <div class="main-form__select-wrapper">
+                <div class="input-container-form input-container-form_mb">
+                    <div class="input-container-form__icon"></div>
+                    <div class="input-container-form__wrapper">
+                        <input class="input-container-form__input" required>
+                        <label class="input-container-form__label">Введите имя</label>
+                    </div>
+                </div>
+                <div class="input-container-form input-container-form_mb">
+                    <div class="input-container-form__icon input-container-form__icon_tel"></div>
+                    <div class="input-container-form__wrapper">
+                        <input class="input-container-form__input" required>
+                        <label class="input-container-form__label">Введите номер</label>
+                    </div>
+                </div>
+                <div class="main-form__calendar">
+                    <input class="date" id="date-form">
+                </div>
+            </div>   
+        </div>
+    </div>
+    <footer class="main-form__footer footer-main-form">
+        <div class="footer-main-form__step-circle">
+            <div class="footer-main-form__circle footer-main-form__circle_act" data-form-id="#circ-1">
+                <span class="footer-main-form__index">01</span>
+                <div class="footer-main-form__circle-bg"></div>
+            </div>
+        </div>
+        <div class="footer-main-form__step-line">
+            <div class="footer-main-form__line">
+                <div class="footer-main-form__line-bg"></div>
+            </div>
+        </div>
+        <div class="footer-main-form__step-circle">
+            <div class="footer-main-form__circle" data-form-id="#circ-2">
+                <span class="footer-main-form__index">02</span>
+                <div class="footer-main-form__circle-bg"></div>
+            </div>
+        </div>
+        <div class="footer-main-form__step-line">
+            <div class="footer-main-form__line">
+                <div class="footer-main-form__line-bg"></div>
+            </div>
+        </div>
+        <div class="footer-main-form__step-circle">
+            <div class="footer-main-form__circle" data-form-id="#circ-3">
+                <span class="footer-main-form__index">03</span>
+                <div class="footer-main-form__circle-bg"></div>
+            </div>
+        </div>
+    </footer>
+</form>
+    </div>
     <header class="header">
         <div class="header__swiper swiper-header swiper">
     <div class="swiper-header__wrapper swiper-wrapper">
@@ -26,7 +160,7 @@
                 <p class="header-slide__text header-slide__text_first" data-swiper-parallax="40%"data-swiper-parallax-duration="600">Взгляните на мир через объектив моей камеры</p>
                 <p class="header-slide__text header-slide__text_second" data-swiper-parallax="40%"data-swiper-parallax-duration="600">Самые стильные съемки</p>
                 <div class="header-slide__button button-order">
-                    <button class="button-order__btn">Записаться</button>
+                    <button class="button-order__btn toggle-pop-up-main">Записаться</button>
                 </div>
             </div>
         </div>
@@ -40,7 +174,7 @@
             <p class="header-slide__text header-slide__text_first" data-swiper-parallax="40%"data-swiper-parallax-duration="600">Фотосессии в Могилеве: в студии, на улице и других локациях</p>
             <p class="header-slide__text header-slide__text_second" data-swiper-parallax="40%"data-swiper-parallax-duration="600">Качественные и современные фотки</p>
             <div class="header-slide__button button-order">
-                <button class="button-order__btn">Записаться</button>
+                <button class="button-order__btn toggle-pop-up-main">Записаться</button>
                 <svg class="button-order__circle-text circle-text hide" viewBox="0 0 80 80">
                     <path class="circle-text__path" id="circle-text" d="M 0,40 a 40,40 0 1,1 0,1 z" />
                     <text>
@@ -74,7 +208,7 @@
             </li>
         </ul>
     </div>
-    <button class="navigation__btn button">Заказать</button>
+    <button class="navigation__btn button toggle-pop-up-main">Заказать</button>
 </nav>
     </div>
     <div class="header__bottom">
@@ -164,53 +298,7 @@
                         </header>
                         <p class="service-block__text">Во время прогулки мы сделаем фотографии, которые вы запомните надолго, максимально живые и естественные</p>
                         <footer class="service-block__footer">
-                            <button class="service-block__button button">Узнать цены и заказать</button>
-                        </footer>
-                    </div>
-                    <div class="service-block__content service-block__content_second">
-                        <header class="service-block__head">
-                            <h3 class="service-block__title">Прайс</h3>
-                            <span class="service-block__icon"></span>
-                        </header>
-                        <p class="service-block__text service-block__text_second">Рассчитайте стоимость фотосессии</p>
-                        <div class="service-block__inputs">
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Время съемки</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="50" data-identificator="item1">1 час</li>
-                                        <li class="dropdown-select__item" data-value="90" data-identificator="item1">2 часа</li>
-                                        <li class="dropdown-select__item" data-value="130" data-identificator="item1">3 часа</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Кол-во фотографий в обработке</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="10" data-identificator="item2">10</li>
-                                        <li class="dropdown-select__item" data-value="20" data-identificator="item2">20</li>
-                                        <li class="dropdown-select__item" data-value="30" data-identificator="item2">30</li>
-                                        <li class="dropdown-select__item" data-value="50" data-identificator="item2">50</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Исходники</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="5" data-identificator="item3">Да</li>
-                                        <li class="dropdown-select__item" data-value="0" data-identificator="item3">Нет</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                        </div>
-                        <footer class="service-block__footer">
-                            <button class="service-block__button button">Заказать</button>
-                            <p class="service-block__price">Итого: <span class="service-block__price-num">0</span> <span class="service-block__price-rub">Руб</span></p>
+                            <button class="service-block__button button toggle-pop-up-main">Узнать цены и заказать</button>
                         </footer>
                     </div>
                 </div>
@@ -238,53 +326,7 @@
                         </header>
                         <p class="service-block__text">Много фотограций в разных интерьерах отражают ваши будни и отлично подходят для публикации в соцсетях</p>
                         <footer class="service-block__footer">
-                            <button class="service-block__button button">Узнать цены и заказать</button>
-                        </footer>
-                    </div>
-                    <div class="service-block__content service-block__content_second">
-                        <header class="service-block__head">
-                            <h3 class="service-block__title">Прайс</h3>
-                            <span class="service-block__icon"></span>
-                        </header>
-                        <p class="service-block__text service-block__text_second">Рассчитайте стоимость фотосессии</p>
-                        <div class="service-block__inputs">
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Время съемки</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="50" data-identificator="item1">1 час</li>
-                                        <li class="dropdown-select__item" data-value="90" data-identificator="item1">2 часа</li>
-                                        <li class="dropdown-select__item" data-value="130" data-identificator="item1">3 часа</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Кол-во фотографий в обработке</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="10" data-identificator="item2">10</li>
-                                        <li class="dropdown-select__item" data-value="20" data-identificator="item2">20</li>
-                                        <li class="dropdown-select__item" data-value="30" data-identificator="item2">30</li>
-                                        <li class="dropdown-select__item" data-value="50" data-identificator="item2">50</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Исходники</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="5" data-identificator="item3">Да</li>
-                                        <li class="dropdown-select__item" data-value="0" data-identificator="item3">Нет</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                        </div>
-                        <footer class="service-block__footer">
-                            <button class="service-block__button button">Заказать</button>
-                            <p class="service-block__price">Итого: <span class="service-block__price-num">0</span> <span class="service-block__price-rub">Руб</span></p>
+                            <button class="service-block__button button toggle-pop-up-main">Узнать цены и заказать</button>
                         </footer>
                     </div>
                 </div>
@@ -304,53 +346,7 @@
                         </header>
                         <p class="service-block__text">Индивидуальная съемка - это прекрасная возможность отвлечься от повседневной суеты и по-новому взглянуть на себя</p>
                         <footer class="service-block__footer">
-                            <button class="service-block__button button">Узнать цены и заказать</button>
-                        </footer>
-                    </div>
-                    <div class="service-block__content service-block__content_second">
-                        <header class="service-block__head">
-                            <h3 class="service-block__title">Прайс</h3>
-                            <span class="service-block__icon"></span>
-                        </header>
-                        <p class="service-block__text service-block__text_second">Рассчитайте стоимость фотосессии</p>
-                        <div class="service-block__inputs">
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Время съемки</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="50" data-identificator="item1">1 час</li>
-                                        <li class="dropdown-select__item" data-value="90" data-identificator="item1">2 часа</li>
-                                        <li class="dropdown-select__item" data-value="130" data-identificator="item1">3 часа</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Кол-во фотографий в обработке</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="10" data-identificator="item2">10</li>
-                                        <li class="dropdown-select__item" data-value="20" data-identificator="item2">20</li>
-                                        <li class="dropdown-select__item" data-value="30" data-identificator="item2">30</li>
-                                        <li class="dropdown-select__item" data-value="50" data-identificator="item2">50</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Исходники</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="5" data-identificator="item3">Да</li>
-                                        <li class="dropdown-select__item" data-value="0" data-identificator="item3">Нет</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                        </div>
-                        <footer class="service-block__footer">
-                            <button class="service-block__button button">Заказать</button>
-                            <p class="service-block__price">Итого: <span class="service-block__price-num">0</span> <span class="service-block__price-rub">Руб</span></p>
+                            <button class="service-block__button button toggle-pop-up-main">Узнать цены и заказать</button>
                         </footer>
                     </div>
                 </div>
@@ -370,53 +366,7 @@
                         </header>
                         <p class="service-block__text">Фотосессия в паре с друзьями, родственниками, коллегами или любыми другими людьми позволяет сохранить и запомнить важные моменты из жизни</p>
                         <footer class="service-block__footer">
-                            <button class="service-block__button button">Узнать цены и заказать</button>
-                        </footer>
-                    </div>
-                    <div class="service-block__content service-block__content_second">
-                        <header class="service-block__head">
-                            <h3 class="service-block__title">Прайс</h3>
-                            <span class="service-block__icon"></span>
-                        </header>
-                        <p class="service-block__text service-block__text_second">Рассчитайте стоимость фотосессии</p>
-                        <div class="service-block__inputs">
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Время съемки</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="50" data-identificator="item1">1 час</li>
-                                        <li class="dropdown-select__item" data-value="90" data-identificator="item1">2 часа</li>
-                                        <li class="dropdown-select__item" data-value="130" data-identificator="item1">3 часа</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Кол-во фотографий в обработке</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="10" data-identificator="item2">10</li>
-                                        <li class="dropdown-select__item" data-value="20" data-identificator="item2">20</li>
-                                        <li class="dropdown-select__item" data-value="30" data-identificator="item2">30</li>
-                                        <li class="dropdown-select__item" data-value="50" data-identificator="item2">50</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Исходники</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="5" data-identificator="item3">Да</li>
-                                        <li class="dropdown-select__item" data-value="0" data-identificator="item3">Нет</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                        </div>
-                        <footer class="service-block__footer">
-                            <button class="service-block__button button">Заказать</button>
-                            <p class="service-block__price">Итого: <span class="service-block__price-num">0</span> <span class="service-block__price-rub">Руб</span></p>
+                            <button class="service-block__button button toggle-pop-up-main">Узнать цены и заказать</button>
                         </footer>
                     </div>
                 </div>
@@ -436,53 +386,7 @@
                         </header>
                         <p class="service-block__text">Профессиональная портретная фотосъемка позволяет сделать акцент на наиболее значимых чертах характера конкретной личности, отодвигая остальные на второй план, а то и вовсе убирая их из кадра</p>
                         <footer class="service-block__footer">
-                            <button class="service-block__button button">Узнать цены и заказать</button>
-                        </footer>
-                    </div>
-                    <div class="service-block__content service-block__content_second">
-                        <header class="service-block__head">
-                            <h3 class="service-block__title">Прайс</h3>
-                            <span class="service-block__icon"></span>
-                        </header>
-                        <p class="service-block__text service-block__text_second">Рассчитайте стоимость фотосессии</p>
-                        <div class="service-block__inputs">
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Время съемки</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="50" data-identificator="item1">1 час</li>
-                                        <li class="dropdown-select__item" data-value="90" data-identificator="item1">2 часа</li>
-                                        <li class="dropdown-select__item" data-value="130" data-identificator="item1">3 часа</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Кол-во фотографий в обработке</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="10" data-identificator="item2">10</li>
-                                        <li class="dropdown-select__item" data-value="20" data-identificator="item2">20</li>
-                                        <li class="dropdown-select__item" data-value="30" data-identificator="item2">30</li>
-                                        <li class="dropdown-select__item" data-value="50" data-identificator="item2">50</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                            <div class="dropdown-select">
-                                <button class="dropdown-select__button" data-lang="switch-lang">Исходники</button>
-                                <div class="dropdown-select__grid">
-                                    <ul class="dropdown-select__list">
-                                        <li class="dropdown-select__item" data-value="5" data-identificator="item3">Да</li>
-                                        <li class="dropdown-select__item" data-value="0" data-identificator="item3">Нет</li>
-                                    </ul>
-                                    <input type="text" name="select-category" value="" class="dropdown-select__input">
-                                </div>
-                            </div>
-                        </div>
-                        <footer class="service-block__footer">
-                            <button class="service-block__button button">Заказать</button>
-                            <p class="service-block__price">Итого: <span class="service-block__price-num">0</span> <span class="service-block__price-rub">Руб</span></p>
+                            <button class="service-block__button button toggle-pop-up-main">Узнать цены и заказать</button>
                         </footer>
                     </div>
                 </div>

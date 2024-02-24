@@ -1,8 +1,11 @@
 import slider from "./modules/slider";
 slider();
 
+import popUpToggle from "./modules/open-pop-up";
+popUpToggle();
+
 import serviceItemCost from "./modules/service-item-price";
-serviceItemCost();
+serviceItemCost(dataService);
 
 import road from "./modules/road";
 road();
@@ -13,9 +16,16 @@ hoverImg();
 import feedback from "./modules/feedback";
 feedback();
 
+import changeForm from "./modules/main-form";
+changeForm();
+
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 
 new AirDatepicker('#date', {
+    inline: true
+})
+
+new AirDatepicker('#date-form', {
     inline: true
 })
