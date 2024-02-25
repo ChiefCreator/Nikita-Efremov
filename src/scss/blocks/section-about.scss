@@ -1,13 +1,18 @@
 .about{
     padding: 100px 0;
+    overflow: hidden;
     &__title{
         margin-bottom: 50px;
     }
     &__article{
         display: flex;
         gap: 100px;
+        @media (max-width:980px) {
+            flex-direction: column;
+        }
     }
     &__photo-wrapper{
+        max-width: 450px;
         flex: 0 0 450px;
         height: 550px;
         position: relative;
