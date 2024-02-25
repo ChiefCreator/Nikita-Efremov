@@ -5,13 +5,16 @@
         justify-content: space-between;
     }
     &__content{
-        flex: 0 1 50%;
+        flex: 1 1 50%;
         position: relative;
         overflow: hidden;
     }
     &__photo-wrapper{
-        flex: 0 1 50%;
+        flex: 1 1 50%;
         position: relative;
+        @media (max-width:1100px) {
+            display: none;
+        }
     }
     &__photo{
         box-shadow: 0 5px 20px rgba(3, 2, 2, .6);
@@ -39,6 +42,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 20px;
+        @media (max-width:1100px) {
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+        }
     }
 }
 .change-form{
@@ -97,14 +106,18 @@
     }
     &__button{
         margin-top: auto;
-        width: 400px;
+        width: min(400px, 100%);
         border: 2px solid rgb(72, 72, 73);
         background-color: transparent;
+    }
+    &__calendar{
+        width: min(398px, calc(100% - 4px));
+        height: auto;
     }
 }
 .input-container{
     display: flex;
-    width: 400px;
+    width: min(400px, 100%);
     height: 40px;
     border: 2px solid rgb(72, 72, 73);
     gap: 10px;
@@ -155,7 +168,7 @@
     }
 }
 .textarrea-container{
-    width: 400px;
+    width: min(400px, 100%);
     height: 100px;
     border: 2px solid rgb(72, 72, 73);
     position: relative;
@@ -190,7 +203,7 @@
     background: rgb(44, 45, 50) !important;
     border: 2px solid rgb(72, 72, 73) !important;
     color: $light-color !important;
-    width: 400px !important;
+    width: 100% !important;
     border-radius: 0 !important;
     .air-datepicker-nav{
         border-bottom: 2px solid rgb(72, 72, 73) !important;
