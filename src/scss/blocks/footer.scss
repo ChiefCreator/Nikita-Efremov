@@ -12,6 +12,36 @@
     &__contacts{
         grid-column-start: 5;
     }
+    @media (max-width:1000px) {
+        &__content{
+            grid-template-columns: auto auto;
+            gap: 15px;
+        }
+        &__navigation{
+            grid-column-start: 1;
+        }
+        &__contacts{
+            grid-column-start: 2;
+        }
+        &__brand{
+            grid-column: span 2;
+        }
+    }
+    @media (max-width:500px) {
+        &__content{
+            grid-template-columns: 12fr;
+        }
+        &__navigation{
+            grid-column-start: 1;
+        }
+        &__contacts{
+            grid-column-start: 1;
+        }
+        &__brand{
+            grid-column: span 1;
+            margin-bottom: 20px;
+        }
+    }
 }
 .footer-nav{
     &__title{
@@ -79,4 +109,43 @@
 }
 .footer-social__link:hover::before{
     color: rgb(255, 255, 255);
+}
+@media (max-width:500px) {
+    .spoller{
+        cursor: pointer;
+        &_open{
+            .spoller__body{
+                grid-template-rows: 1fr;
+            }
+            .spoller__content{
+                height: auto;
+            }
+        }
+        &__head{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__arrow{
+            transition: transform .3s ease;
+            &::before{
+                content: "\f105";
+                @include font-awesome;
+                font-size: 20px;
+                color: white;
+            }
+            &_act{
+                transform: rotate(90deg);
+            }
+        }
+        &__body{
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows .3s ease;
+            overflow: hidden;
+        }
+        &__content{
+            min-height: 0;
+        }
+    }
 }

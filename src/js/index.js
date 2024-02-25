@@ -19,6 +19,9 @@ feedback();
 import changeForm from "./modules/main-form";
 changeForm();
 
+import spollers from "./modules/spollers";
+spollers();
+
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 
