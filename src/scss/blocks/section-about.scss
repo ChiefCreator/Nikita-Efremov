@@ -1,6 +1,9 @@
 .about{
     padding: 100px 0;
     overflow: hidden;
+    @media (max-width:980px) {
+        padding: 100px 0 0 0;
+    }
     &__title{
         margin-bottom: 50px;
     }
@@ -45,6 +48,9 @@
         gap: 20px;
         color: $light-color;
         font-size: 17px;
+        @media (max-width:980px) {
+            flex: 0 1 auto;
+        }
     }
     &__button-order{
         margin-top: 50px;
