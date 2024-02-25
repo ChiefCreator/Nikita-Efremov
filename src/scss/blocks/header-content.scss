@@ -21,6 +21,9 @@
     &__link_twitter::before{
         content: "\f099";
     }
+    @media (max-width:800px) {
+        display: none;
+    }
 }
 .social-header__link:hover::before{
     color: rgb(255, 255, 255);
@@ -55,6 +58,9 @@
         &:active{
             transform: scale(.9);
         }
+    }
+    @media (max-width:1000px) {
+        display: none;
     }
 }
 .fraction-header{
@@ -93,6 +99,23 @@
     &__text{
         color: white;
         font-size: 20px;
+    }
+    @media (max-width:1000px) {
+        flex: 1 1 auto;
+    }
+    @media (max-width:1000px) {
+        &__list{
+            display: grid;
+            grid-template-columns: repeat(2,6fr);
+            gap: 20px;
+        }
+    }
+    @media (max-width:620px) {
+        &__list{
+            display: grid;
+            grid-template-columns: 12fr;
+            gap: 20px;
+        }
     }
 }
 .pagination-header{
@@ -141,5 +164,8 @@
                 height: 100%;
             }
         }
+    }
+    @media (max-width:620px) {
+        display: none;
     }
 }

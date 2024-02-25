@@ -146,17 +146,40 @@
     </footer>
 </form>
     </div>
+    <div class="mobile-menu">
+        <header class="mobile-menu__head">
+            <h4 class="mobile-menu__title">Меню</h4>
+            <span class="mobile-menu__close"></span>
+        </header>
+        <div class="mobile-menu__body">
+            <nav class="mobile-menu__nav">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Услуги</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Фотостудия</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Отзывы</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="navigation__btn button navigation__btn_mobile-menu toggle-pop-up-main">Заказать</button>
+        </div>
+    </div>
     <header class="header">
         <div class="header__swiper swiper-header swiper">
     <div class="swiper-header__wrapper swiper-wrapper">
         <div class="swiper-header__slide header-slide header-slide_first swiper-slide">
             <div class="header-slide__content">
-                <header class="header-slide__head">
-                    <h1 class="header-slide__title">
-                        <span class="header-slide__title-left" data-swiper-parallax="45%" data-swiper-parallax-duration="600">Photographer</span>
-                        <span class="header-slide__title-right" data-swiper-parallax="-45%" data-swiper-parallax-duration="600">Nikita Efremov</span>
-                    </h1>
-                </header>
+                <h1 class="header-slide__title" data-swiper-parallax="-40%"data-swiper-parallax-duration="600">Efremov</h1>
                 <p class="header-slide__text header-slide__text_first" data-swiper-parallax="40%"data-swiper-parallax-duration="600">Взгляните на мир через объектив моей камеры</p>
                 <p class="header-slide__text header-slide__text_second" data-swiper-parallax="40%"data-swiper-parallax-duration="600">Самые стильные съемки</p>
                 <div class="header-slide__button button-order">
@@ -165,12 +188,7 @@
             </div>
         </div>
         <div class="swiper-header__slide header-slide header-slide_second swiper-slide">
-            <header class="header-slide__head">
-                <h1 class="header-slide__title">
-                    <span class="header-slide__title-left" data-swiper-parallax="45%" data-swiper-parallax-duration="600">Фотостудия</span>
-                    <span class="header-slide__title-right" data-swiper-parallax="-45%" data-swiper-parallax-duration="600">PhotoStyle</span>
-                </h1>
-            </header>
+            <h1 class="header-slide__title" data-swiper-parallax="-40%"data-swiper-parallax-duration="600">Nikita</h1>
             <p class="header-slide__text header-slide__text_first" data-swiper-parallax="40%"data-swiper-parallax-duration="600">Фотосессии в Могилеве: в студии, на улице и других локациях</p>
             <p class="header-slide__text header-slide__text_second" data-swiper-parallax="40%"data-swiper-parallax-duration="600">Качественные и современные фотки</p>
             <div class="header-slide__button button-order">
@@ -208,7 +226,8 @@
             </li>
         </ul>
     </div>
-    <button class="navigation__btn button toggle-pop-up-main">Заказать</button>
+    <button class="navigation__btn button navigation__btn_menu toggle-pop-up-main">Заказать</button>
+    <div class="burger-btn"></div>
 </nav>
     </div>
     <div class="header__bottom">

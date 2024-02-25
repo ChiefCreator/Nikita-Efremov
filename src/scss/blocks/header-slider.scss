@@ -7,7 +7,8 @@
     }
 }
 .header-slide{
-    padding: 80px 180px 200px 180px;
+    padding: 80px 60px 200px clamp(5.625rem, -0.071rem + 11.39vw, 11.25rem);
+    overflow: hidden;
     &__content{
         height: 100%;
         display: flex;
@@ -25,28 +26,17 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
-    &__head{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
     &__title{
-        display: flex;
-        flex-direction: column;
-        font-size: 70px;
-        letter-spacing: 10px;
-    }
-    &__title-left{
         color: white;
-    }
-    &__title-right{
-        margin-left: 300px;
-        color: $main-color;
+        font-size: clamp(2.813rem, 2.449rem + 1.94vw, 4.375rem);
+        letter-spacing: clamp(0.188rem, 0.086rem + 0.54vw, 0.625rem);
+        margin-top: clamp(0rem, -0.436rem + 2.33vw, 1.875rem);
+        margin-bottom: clamp(0rem, -1.017rem + 5.43vw, 4.375rem);
     }
     &__text{
-        margin-top: 30px;
+        margin-top: clamp(1.25rem, 1.105rem + 0.78vw, 1.875rem);
         max-width: 450px;
-        font-size: 22px;
+        font-size: clamp(1rem, 0.913rem + 0.47vw, 1.375rem);
         color: white;
         display: flex;
         &::before{
@@ -57,12 +47,30 @@
             background-color: $muted-light-bg;
             margin-right: 10px;
             margin-top: 15px;
+            @media (max-width:500px) {
+                display: none;
+            }
         }
         &_first::before{
             flex: 0 0 40px;
         }
     }
     &__button{
-        margin-top: 50px;
+        margin-top: clamp(1.875rem, 1.584rem + 1.55vw, 3.125rem);
+    }
+}
+@media (max-width:1000px) {
+    .header-slide{
+        padding: 80px 60px 300px clamp(5.625rem, -0.071rem + 11.39vw, 11.25rem);
+    }
+}
+@media (max-width:800px) {
+    .header-slide{
+        padding: 80px 60px 200px clamp(0.625rem, -0.125rem + 4vw, 1.875rem);
+    }
+}
+@media (max-width:620px) {
+    .header-slide{
+        padding: 80px 60px 400px clamp(0.625rem, -0.125rem + 4vw, 1.875rem);
     }
 }

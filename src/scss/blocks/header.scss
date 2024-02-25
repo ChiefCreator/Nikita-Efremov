@@ -9,8 +9,8 @@
         position: absolute;
         z-index: 9;
         top:30px;
-        left: 30px;
-        right: 30px;
+        left: clamp(0.625rem, -0.125rem + 4vw, 1.875rem);
+        right: clamp(0.625rem, -0.125rem + 4vw, 1.875rem);
         bottom: 0px;
         pointer-events: none;
     }

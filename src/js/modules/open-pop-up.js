@@ -4,6 +4,10 @@ function popUpToggle() {
     let mainPopUpForm = document.querySelector(".pop-up");
     let btnCloseMainForm = mainPopUpForm.querySelector(".main-form__close");
 
+    let burger = document.querySelector(".burger-btn");
+    let mobileMenu = document.querySelector(".mobile-menu");
+    let btnCloseMobileMenu = mobileMenu.querySelector(".mobile-menu__close");
+
     let over = document.querySelector(".over");
     let body = document.querySelector("body");
     const timeout = 500;
@@ -17,12 +21,26 @@ function popUpToggle() {
         })
     })
     btnCloseMainForm.addEventListener("click", function() {
+
+        mainPopUpForm.classList.remove("pop-up_open");
+
+        if (!mobileMenu.classList.contains("mobile-menu_open")) {
+            over.classList.remove("over_open");
+            bodyunLock()
+        }
+    })
+    over.addEventListener("click", function() {
         mainPopUpForm.classList.remove("pop-up_open");
         over.classList.remove("over_open");
         bodyunLock()
     })
-    over.addEventListener("click", function() {
-        mainPopUpForm.classList.remove("pop-up_open");
+    burger.addEventListener("click", function() {
+        mobileMenu.classList.add("mobile-menu_open");
+        over.classList.add("over_open");
+        bodyLock();
+    })
+    btnCloseMobileMenu.addEventListener("click", function() {
+        mobileMenu.classList.remove("mobile-menu_open");
         over.classList.remove("over_open");
         bodyunLock()
     })

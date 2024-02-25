@@ -175,13 +175,21 @@
 .pop-up{
     position: fixed;
     top:0;
-    right: -100%;
+    right: -500px;
+    width: 500px;
     height: 100%;
-    z-index: 10;
+    z-index: 12;
     overflow: auto;
     transition: right .5s ease;
     &_open{
         right: 0;
+    }
+    @media (max-width:800px) {
+        width: 100%;
+        right: -100%;
+        &_open{
+            right: 0;
+        }
     }
 }
 .over{
@@ -191,7 +199,7 @@
     top:0;
     left: 0;
     background-color: rgba(0,0,0,.6);
-    z-index: 10;
+    z-index: 11;
     opacity: 0;
     visibility: hidden;
     transition: all .5s ease;

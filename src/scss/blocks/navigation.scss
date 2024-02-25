@@ -38,5 +38,104 @@
     }
     &__btn{
         margin-left: auto;
+        &_mobile-menu{
+            margin: 20px 0 0 0;
+            display: none;
+        }
+        @media (max-width:520px) {
+            &_menu{
+                display: none;
+            }
+            &_mobile-menu{
+                display: block;
+            }
+        }
+    }
+}
+.burger-btn{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    &::before{
+        content: "\f0c9";
+        @include font-awesome;
+        font-size: 35px;
+        color: white;
+    }
+}
+.mobile-menu{
+    display: none;
+    position: fixed;
+    top:0;
+    right: -500px;
+    width: 500px;
+    height: 100%;
+    background-color: rgb(70, 71, 75);
+    z-index: 11;
+    transition: right .5s ease;
+    &_open{
+        right: 0;
+    }
+    &__head{
+        border-bottom: 2px solid $light-color;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title{
+        margin-left: 20px;
+        font-size: 25px;
+        color: white;
+    }
+    &__close{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        cursor: pointer;
+        &::before{
+            content: "\f00d";
+            @include font-awesome;
+            font-size: 30px;
+            color: white;
+        }
+    }
+    &__body{
+        padding: 20px 20px;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__link{
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+    }
+}
+@media (max-width:1080px) {
+    .burger-btn{
+        display: flex;
+    }
+    .navigation{
+        &__menu{
+            display: none;
+        }
+    }
+    .mobile-menu{
+        display: block;
+    }
+}
+@media (max-width:800px) {
+    .mobile-menu{
+        width: 100%;
+        right: -100%;
+        &_open{
+            right: 0;
+        }
     }
 }
