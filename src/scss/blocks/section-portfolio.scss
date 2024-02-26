@@ -45,6 +45,7 @@
     &__img-link{
         position: absolute;
         transition: transform .3s ease;
+        overflow: hidden;
         &:hover{
             transform: scale(1.05);
         }
@@ -104,6 +105,10 @@
             object-position: center;
         }
         
+    }
+    &__img-wrap{
+        height: 100%;
+        width: 100%;
     }
     &__img-title{   
         position: absolute;

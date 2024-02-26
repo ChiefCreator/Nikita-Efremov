@@ -216,3 +216,24 @@
         visibility: visible;
     }
 }
+.anim-img{
+    
+}
+.anim-img-left{
+    opacity: 0;
+    transform: translate(-100px, 0);
+    transition: all .5s ease;
+    &_act{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+.anim-img-right{
+    opacity: 0;
+    transform: translate(100px, 0);
+    transition: all .5s ease;
+    &_act{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}

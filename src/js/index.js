@@ -7,6 +7,9 @@ new AirDatepicker('#date-form', {
     inline: true
 })
 
+import animImg from "./modules/anim-img";
+animImg();
+
 import slider from "./modules/slider";
 slider();
 

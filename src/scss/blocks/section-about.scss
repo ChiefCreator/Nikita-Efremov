@@ -1,6 +1,5 @@
 .about{
     padding: 100px 0;
-    overflow: hidden;
     @media (max-width:980px) {
         padding: 100px 0 0 0;
     }
@@ -24,6 +23,7 @@
         box-shadow: 0 5px 20px rgba(3, 2, 2, .6);
         width: 100%;
         height: 100%;
+        overflow: hidden;
         img{
             width: 100%;
             height: 100%;
