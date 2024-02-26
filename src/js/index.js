@@ -1,3 +1,12 @@
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
+new AirDatepicker('#date', {
+    inline: true
+})
+new AirDatepicker('#date-form', {
+    inline: true
+})
+
 import slider from "./modules/slider";
 slider();
 
@@ -21,14 +30,3 @@ changeForm();
 
 import spollers from "./modules/spollers";
 spollers();
-
-import AirDatepicker from 'air-datepicker';
-import 'air-datepicker/air-datepicker.css';
-
-new AirDatepicker('#date', {
-    inline: true
-})
-
-new AirDatepicker('#date-form', {
-    inline: true
-})

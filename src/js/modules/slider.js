@@ -45,6 +45,7 @@ function slider() {
         delay: 5000,
         disableOnInteraction: false
     },
+    autoHeight: true,
     parallax:true,
     pagination: {
       el: '.rewiews-swiper__bullets',

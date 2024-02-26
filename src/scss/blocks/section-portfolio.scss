@@ -111,8 +111,8 @@
         width: 100%;
         color: white;
         text-align: center;
-        font-size: 30px;
-        letter-spacing: 7px;
+        font-size: clamp(1.438rem, 1.336rem + 0.54vw, 1.875rem);
+        letter-spacing: clamp(0.188rem, 0.129rem + 0.31vw, 0.438rem);
         text-transform: uppercase;
     }   
     &__link{
@@ -269,6 +269,11 @@
                 height: auto;
             }
             
+        }
+    }
+    @media (max-width:400px) {
+        &__wrapper{
+            grid-template-rows: 2150px;
         }
     }
 }
