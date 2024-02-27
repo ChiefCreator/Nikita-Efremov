@@ -29,8 +29,6 @@
     color: white;
     font-size: 16px;
     cursor: pointer;
-    background-color: rgba(139, 139, 139, 0.3);
-    backdrop-filter: blur(2px);
     transition: transform .3s ease, background-color .3s ease;
     &:active{
         transform: scale(.95);
@@ -48,8 +46,6 @@
         cursor: pointer;
         position: relative;
         padding: 10px 25px;
-        background-color: rgba(139, 139, 139, 0.3);
-        backdrop-filter: blur(2px);
         border: 2px solid white;
         color: white;
         font-size: 16px;
@@ -162,9 +158,6 @@
     position: relative;
     margin-left: 0;
     cursor: pointer;
-    @media (max-width: 800px) {
-        margin-left: 23px;
-    }
     &::before{
         content: "";
         position: absolute;
@@ -174,6 +167,18 @@
         height: 30px;
         border: 3px solid red;
         transition: left .3s ease;
+        @media (max-width: 700px) {
+            top: -15px;
+            left: -15px;
+            width: 22px;
+            height: 22px;
+        }
+        @media (max-width: 450px) {
+            top: -13px;
+            left: -13px;
+            width: 17px;
+            height: 17px;
+        }
     }
     &:hover::before{
         left: calc(100% - 33px);
@@ -216,9 +221,6 @@
         visibility: visible;
     }
 }
-.anim-img{
-    
-}
 .anim-img-left{
     opacity: 0;
     transform: translate(-100px, 0);
@@ -235,5 +237,37 @@
     &_act{
         opacity: 1;
         transform: translate(0, 0);
+    }
+}
+.link-more{
+    color: white;
+    transition: color .3s ease;
+    position: relative;
+    &::after{
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: -20px;
+        content: "\f105";
+        color: $light-color;
+        @include font-awesome;
+        font-size: 20px;
+        margin-top: auto;
+        transition:inherit;
+    }
+    &:hover{
+        color: $main-color;
+    }
+    &:hover::after{
+        color: $main-color;
+        animation: arr-right .5s ease 2;
+        @keyframes arr-right {
+            0%,100%{
+                transform: translate(0, -50%);
+            }
+            50%{
+                transform: translate(7px, -50%);
+            }
+        }
     }
 }

@@ -45,6 +45,67 @@ function road() {
         }
         if (currentIndex > 0) currentIndex--;
     })
+
+    for (let i = 0;i < arrCircles.length; i++) {
+        arrCircles[i].addEventListener("click", function() {
+
+            if (arrCircles[i - 1]) {
+                if (arrCircles[i - 1].classList.contains("road__circle_act")) {
+                    currentIndex = i;
+
+                    arrTabs.forEach(tab => {
+                        tab.classList.remove("tabs__item_act");
+                    })
+                    arrTabs[i].classList.add("tabs__item_act");
+
+                    arrCircles[i].classList.add("road__circle_act");
+                    arrCircles[i].classList.add("road__circle_delay-plus");
+
+                    arrLines[i - 1].classList.add("road__line_act");
+                    arrLines[i - 1].classList.remove("road__line_delay-plus");
+                }
+            }
+            if (arrCircles[i + 1]) {
+                if (arrCircles[i + 1].classList.contains("road__circle_act") && arrCircles[i - 1]) {
+                    currentIndex = i;
+
+                    arrTabs.forEach(tab => {
+                        tab.classList.remove("tabs__item_act");
+                    })
+                    arrTabs[i].classList.add("tabs__item_act");
+                    
+                    arrCircles[i + 1].classList.remove("road__circle_act");
+                    arrCircles[i + 1].classList.remove("road__circle_delay-plus");
+                    arrCircles[i + 1].classList.add("road__circle_delay-minus");
+
+                    arrLines[i].classList.remove("road__line_act");
+                    arrLines[i].classList.add("road__line_delay-plus");
+                } 
+                else if (arrCircles[i + 1].classList.contains("road__circle_act") && !arrCircles[i - 1] && !arrCircles[i + 2].classList.contains("road__circle_act")) {
+                    currentIndex = i;
+
+                    arrTabs.forEach(tab => {
+                        tab.classList.remove("tabs__item_act");
+                    })
+                    arrTabs[i].classList.add("tabs__item_act");
+                    
+                    arrCircles[i + 1].classList.remove("road__circle_act");
+                    arrCircles[i + 1].classList.remove("road__circle_delay-plus");
+                    arrCircles[i + 1].classList.add("road__circle_delay-minus");
+
+                    arrLines[i].classList.remove("road__line_act");
+                    arrLines[i].classList.add("road__line_delay-plus");
+                }
+            }
+            if (arrCircles[2]) {
+                if (arrCircles[arrCircles.length - 1].classList.contains("road__circle_act")) {
+                    arrCircles[2].classList.add("road__circle_act");
+                    arrLines[1].classList.add("road__line_act");
+                    arrTabs[3].classList.add("tabs__item_act");
+                }
+            }
+        })
+    }
 }
 
 export default road;

@@ -12,10 +12,173 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="body body_white">
+    <div class="over"></div>
+    <div class="pop-up">
+        <form class="pop-up__main-form main-form">
+    <header class="main-form__head">
+        <h4 class="main-form__title">Обратная связь</h4>
+        <span class="main-form__close"></span>
+    </header>
+    <div class="main-form__body-wrapper">
+        <div class="main-form__body main-form__body_calculation main-form__body_act" id="circ-1">
+            <h5 class="main-form__sub-title">Рассчитайте стоимость</h5>
+            <div class="main-form__select-wrapper">
+                <p class="main-form__inp-text">Выберите услугу</p>
+                <div class="dropdown-select">
+                    <button class="dropdown-select__button" data-lang="switch-lang" type="button">Вид услуги</button>
+                    <div class="dropdown-select__grid">
+                        <ul class="dropdown-select__list">
+                            <li class="dropdown-select__item" data-value="20" data-identificator="item1">Прогулка</li>
+                            <li class="dropdown-select__item" data-value="20" data-identificator="item1">Lifestyle</li>
+                            <li class="dropdown-select__item" data-value="10" data-identificator="item1">Индивидуальная съемка</li>
+                            <li class="dropdown-select__item" data-value="30" data-identificator="item1">Групповая фотоссесия</li>
+                            <li class="dropdown-select__item" data-value="10" data-identificator="item1">Портретная съемка</li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown-select__input">
+                    </div>
+                </div>
+            </div> 
+            <div class="main-form__select-wrapper">
+                <p class="main-form__inp-text">Выберите время съемки</p>
+                <div class="dropdown-select">
+                    <button class="dropdown-select__button" data-lang="switch-lang" type="button">Время съемки</button>
+                    <div class="dropdown-select__grid">
+                        <ul class="dropdown-select__list">
+                            <li class="dropdown-select__item" data-value="50" data-identificator="item2">1 час</li>
+                            <li class="dropdown-select__item" data-value="90" data-identificator="item2">2 часа</li>
+                            <li class="dropdown-select__item" data-value="130" data-identificator="item2">3 часа</li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown-select__input">
+                    </div>
+                </div>
+            </div>  
+            <div class="main-form__select-wrapper">
+                <p class="main-form__inp-text">Выберите кол-во фотографий в обработке</p>
+                <div class="dropdown-select">
+                    <button class="dropdown-select__button" data-lang="switch-lang" type="button">Кол-во фотографий в обработке</button>
+                    <div class="dropdown-select__grid">
+                        <ul class="dropdown-select__list">
+                            <li class="dropdown-select__item" data-value="10" data-identificator="item3">10</li>
+                            <li class="dropdown-select__item" data-value="20" data-identificator="item3">20</li>
+                            <li class="dropdown-select__item" data-value="30" data-identificator="item3">30</li>
+                            <li class="dropdown-select__item" data-value="50" data-identificator="item3">50</li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown-select__input">
+                    </div>
+                </div>
+            </div>  
+            <div class="main-form__select-wrapper">
+                <p class="main-form__inp-text">Выберите исходники</p>
+                <div class="dropdown-select">
+                    <button class="dropdown-select__button" data-lang="switch-lang" type="button">Исходники</button>
+                    <div class="dropdown-select__grid">
+                        <ul class="dropdown-select__list">
+                            <li class="dropdown-select__item" data-value="0" data-identificator="item4">Нет</li>
+                            <li class="dropdown-select__item" data-value="5" data-identificator="item4">Да</li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown-select__input">
+                    </div>
+                </div>
+            </div>   
+            <div class="main-form__total total">
+                <p class="total__text">Итого: <span class="total__cost">0</span> рублей</p>
+            </div>
+        </div>
+        <div class="main-form__body main-form__body_ask" id="circ-2">
+            <h5 class="main-form__sub-title">Задайте вопрос (необязательно)</h5>
+            <div class="textarrea-container-form">
+                <textarea class="textarrea-container-form__textarrea" required></textarea>
+                <label class="textarrea-container-form__label">Введите сообщение</label>
+            </div>
+        </div>
+        <div class="main-form__body main-form__body_send" id="circ-3">
+            <h5 class="main-form__sub-title">Забронируй съемку</h5>
+            <div class="main-form__select-wrapper">
+                <div class="input-container-form input-container-form_mb">
+                    <div class="input-container-form__icon"></div>
+                    <div class="input-container-form__wrapper">
+                        <input class="input-container-form__input" required>
+                        <label class="input-container-form__label">Введите имя</label>
+                    </div>
+                </div>
+                <div class="input-container-form input-container-form_mb">
+                    <div class="input-container-form__icon input-container-form__icon_tel"></div>
+                    <div class="input-container-form__wrapper">
+                        <input class="input-container-form__input" required>
+                        <label class="input-container-form__label">Введите номер</label>
+                    </div>
+                </div>
+                <div class="main-form__calendar">
+                    <input class="date" id="date-form">
+                </div>
+                <button class="main-form__btn button">Заказать</button>
+            </div>   
+        </div>
+    </div>
+    <footer class="main-form__footer footer-main-form">
+        <div class="footer-main-form__step-circle">
+            <div class="footer-main-form__circle footer-main-form__circle_act" data-form-id="#circ-1">
+                <span class="footer-main-form__index">01</span>
+                <div class="footer-main-form__circle-bg"></div>
+            </div>
+        </div>
+        <div class="footer-main-form__step-line">
+            <div class="footer-main-form__line">
+                <div class="footer-main-form__line-bg"></div>
+            </div>
+        </div>
+        <div class="footer-main-form__step-circle">
+            <div class="footer-main-form__circle" data-form-id="#circ-2">
+                <span class="footer-main-form__index">02</span>
+                <div class="footer-main-form__circle-bg"></div>
+            </div>
+        </div>
+        <div class="footer-main-form__step-line">
+            <div class="footer-main-form__line">
+                <div class="footer-main-form__line-bg"></div>
+            </div>
+        </div>
+        <div class="footer-main-form__step-circle">
+            <div class="footer-main-form__circle" data-form-id="#circ-3">
+                <span class="footer-main-form__index">03</span>
+                <div class="footer-main-form__circle-bg"></div>
+            </div>
+        </div>
+    </footer>
+</form>
+    </div>
+    <div class="mobile-menu">
+        <header class="mobile-menu__head">
+            <h4 class="mobile-menu__title">Меню</h4>
+            <span class="mobile-menu__close"></span>
+        </header>
+        <div class="mobile-menu__body">
+            <nav class="mobile-menu__nav">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Услуги</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Фотостудия</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Отзывы</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="navigation__btn button navigation__btn_mobile-menu toggle-pop-up-main">Заказать</button>
+        </div>
+    </div>
     <header class="header-portfolio">
         <div class="container">
             <nav class="navigation">
-    <a href="#" class="navigation__logo logo"><span class="logo__left">Photo</span><span class="logo__right">Style</span></a>
+    <a href="#" class="navigation__logo logo"><span class="logo__left">NE</span><span class="logo__right">fremov</span></a>
     <div class="navigation__menu">
         <ul class="navigation__list">
             <li class="navigation__item">

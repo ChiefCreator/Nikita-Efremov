@@ -14,6 +14,10 @@ function changeForm() {
                         circleArr[i].classList.add("footer-main-form__circle_act");
                         lineArr[i - 1].classList.add("footer-main-form__line-bg_act");
 
+                        form.querySelectorAll(".main-form__body").forEach(body => {
+                            body.classList.remove("main-form__body_act")
+                        })
+
                         addFormBody()
                     }
                 }
@@ -22,13 +26,21 @@ function changeForm() {
                         circleArr[i + 1].classList.remove("footer-main-form__circle_act");
                         lineArr[i].classList.remove("footer-main-form__line-bg_act");
 
-                        removeFormBody()
+                        form.querySelectorAll(".main-form__body").forEach(bodyForm => {
+                            bodyForm.classList.remove("main-form__body_act")
+                        })
+
+                        addFormBody()
                     } 
                     else if (circleArr[i + 1].classList.contains("footer-main-form__circle_act") && !circleArr[i - 1] && !circleArr[i + 2].classList.contains("footer-main-form__circle_act")) {
                         circleArr[i + 1].classList.remove("footer-main-form__circle_act");
                         lineArr[i].classList.remove("footer-main-form__line-bg_act");
 
-                        removeFormBody()
+                        form.querySelectorAll(".main-form__body").forEach(bodyForm => {
+                            bodyForm.classList.remove("main-form__body_act")
+                        })
+
+                        addFormBody()
                     }
                 }
 
@@ -36,11 +48,6 @@ function changeForm() {
                     let data = circleArr[i].dataset.formId;
                     let formBody = form.querySelector(data)
                     formBody.classList.add("main-form__body_act")
-                }
-                function removeFormBody() {
-                    let data = circleArr[i + 1].dataset.formId;
-                    let formBody = form.querySelector(data)
-                    formBody.classList.remove("main-form__body_act")
                 }
             })
         }

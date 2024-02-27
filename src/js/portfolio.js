@@ -1,10 +1,10 @@
-let select = document.querySelector(".dropdown-select_portfolio");
+let select = document.querySelector(".gallery .dropdown-select_portfolio");
 
-const dropdownButton = document.querySelector(".dropdown-select__button")
-const dropdownGrid = document.querySelector(".dropdown-select__grid")
-const dropdownList = document.querySelector(".dropdown-select__list")
-const dropdownListItems =  document.querySelectorAll(".dropdown-select__item")
-const dropdownInput = document.querySelector(".dropdown-select__input")
+const dropdownButton = document.querySelector(".gallery .dropdown-select__button")
+const dropdownGrid = document.querySelector(".gallery .dropdown-select__grid")
+const dropdownList = document.querySelector(".gallery .dropdown-select__list")
+const dropdownListItems =  document.querySelectorAll(".gallery .dropdown-select__item")
+const dropdownInput = document.querySelector(".gallery .dropdown-select__input")
 
 if (localStorage.getItem("portfolio")) {
     dropdownButton.textContent = document.querySelector(`[data-value='${localStorage.getItem("portfolio")}']`).textContent
@@ -56,4 +56,23 @@ document.addEventListener("click", function(e) {
 function closeSelect() {
     dropdownGrid.classList.remove("dropdown-select__grid_visible")
     dropdownList.classList.remove("dropdown-select__list_visible")
-  }
+}
+
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
+
+new AirDatepicker('#date-form', {
+    inline: true
+})
+
+import popUpToggle from "./modules/open-pop-up";
+popUpToggle();
+
+import serviceItemCost from "./modules/service-item-price";
+serviceItemCost();
+
+import changeForm from "./modules/main-form";
+changeForm();
+
+import spollers from "./modules/spollers";
+spollers();
