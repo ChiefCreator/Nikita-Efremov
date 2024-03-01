@@ -1,5 +1,5 @@
 .plan{
-    padding-top: 100px;
+    padding-top: clamp(1.875rem, -0.75rem + 14vw, 6.25rem);
     overflow: hidden;
     &__head{
         display: flex;

@@ -1,5 +1,5 @@
 .portfolio{
-    margin-top: 100px;
+    margin-top: clamp(1.875rem, -0.75rem + 14vw, 6.25rem);
     color: white;
     &__head{
         display: flex;

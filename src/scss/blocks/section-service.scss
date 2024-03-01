@@ -1,5 +1,5 @@
 .service{
-    padding-top: 100px;
+    padding-top: clamp(1.875rem, -0.75rem + 14vw, 6.25rem);
     &__list{
         display: grid;
         grid-template-columns: 12fr;

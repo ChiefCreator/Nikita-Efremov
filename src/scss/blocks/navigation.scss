@@ -41,6 +41,8 @@
         &_mobile-menu{
             margin: 20px 0 0 0;
             display: none;
+            border: 2px solid white;
+            background-color: transparent;
         }
         @media (max-width:520px) {
             &_menu{
@@ -70,14 +72,14 @@
     right: -500px;
     width: 500px;
     height: 100%;
-    background-color: rgb(44, 45, 50);
+    background-color: $bg-color;
     z-index: 11;
     transition: right .5s ease;
     &_open{
         right: 0;
     }
     &__head{
-        border-bottom: 2px solid $light-color;
+        border-bottom: 2px solid rgb(185, 185, 185);
         padding: 20px 0;
         display: flex;
         justify-content: space-between;

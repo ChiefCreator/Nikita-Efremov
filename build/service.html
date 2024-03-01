@@ -160,33 +160,32 @@
     </footer>
 </form>
     </div>
-    <div class="mobile-menu">
-        <header class="mobile-menu__head">
-            <h4 class="mobile-menu__title">Меню</h4>
-            <span class="mobile-menu__close"></span>
-        </header>
-        <div class="mobile-menu__body">
-            <nav class="mobile-menu__nav">
-                <ul class="mobile-menu__list">
-                    <li class="mobile-menu__item">
-                        <a class="mobile-menu__link" href="#">Услуги</a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a class="mobile-menu__link" href="#">Портфолио</a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a class="mobile-menu__link" href="#">Фотостудия</a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a class="mobile-menu__link" href="#">Отзывы</a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a class="mobile-menu__link" href="#">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            <button class="navigation__btn button navigation__btn_mobile-menu toggle-pop-up-main">Заказать</button>
-        </div>
+    <div class="mobile-menu-wrapper">
+        <div class="mobile-menu">
+    <header class="mobile-menu__head">
+        <h4 class="mobile-menu__title">Меню</h4>
+        <span class="mobile-menu__close"></span>
+    </header>
+    <div class="mobile-menu__body">
+        <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="./service.html">Услуги</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="./photostudia.html">Фотостудия</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="./contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="navigation__btn button navigation__btn_mobile-menu toggle-pop-up-main">Заказать</button>
+    </div>
+</div>
     </div>
     <header class="header-pages">
         <div class="container">
@@ -205,10 +204,7 @@
                 <a class="navigation__link" href="./../photostudia.html">Фотостудия</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link">Отзывы</a>
-            </li>
-            <li class="navigation__item">
-                <a class="navigation__link">Контакты</a>
+                <a class="navigation__link" href="./../contacts.html">Контакты</a>
             </li>
         </ul>
     </div>
@@ -349,7 +345,7 @@
     <div class="container">
         <header class="feedback__head">
             <h2 class="feedback__title section-title">Обратная связь</h2>
-            <div class="feedback__change-form change-form">
+            <div class="feedback__change-form change-form change-form_pc">
                 <span class="change-form__title change-form__title_active">Забронировать</span>
                 <span class="change-form__title">Спросить</span>
                 <div class="change-form__line"></div>
@@ -357,6 +353,11 @@
         </header>
         <div class="feedback__wrapper">
             <div class="feedback__content">
+                <div class="feedback__change-form change-form change-form_mobile">
+                    <span class="change-form__title change-form__title_active">Забронировать</span>
+                    <span class="change-form__title">Спросить</span>
+                    <div class="change-form__line"></div>
+                </div>
                 <form class="feedback__form form-feedback form-feedback_first" novalidate>
                     <h3 class="form-feedback__title">Забронируй съемку</h3>
                     <div class="form-feedback__body">

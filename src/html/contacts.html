@@ -19,22 +19,26 @@
     <div class="mobile-menu-wrapper">
         @@include("./blocks/mobile-menu.html")
     </div>
-    <header class="header">
-        @@include("./blocks/header-slider.html")
-        @@include("./blocks/header-content.html")
+    <header class="header-pages">
+        <div class="container">
+            <div class="header-page-content">
+                @@include("./blocks/navigation.html")
+                <div class="header-page-content__wrapper">
+                    <h2 class="header-page-content__title">Контакты</h2>
+                    <p class="header-page-content__text">Остались вопросы, появилось желание, есть задача — пишите, звоните, присоединяйтесь в социальных сетях, не стесняйтесь спрашивать, я всегда рад плодотворному сотрудничеству</p>
+                    <section class="mouse">
+                        <a href="#sub-page"><span></span></a>
+                    </section>
+                </div>
+            </div>
+        </div>
     </header>
-    <main class="main-page">
-        @@include("./blocks/section-about.html")
-        @@include("./blocks/section-service.html")
-        @@include("./blocks/section-plan.html")
-        @@include("./blocks/section-portfolio.html")
+    <main class="sub-page" id="sub-page">
         @@include("./blocks/section-feedback.html")
-        @@include("./blocks/section-rewiews.html")
     </main>
     <footer class="footer">
         @@include("./blocks/footer.html")
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/index.bundle.js"></script>
+    <script src="./js/photostudio.bundle.js"></script>
 </body>
-</html>

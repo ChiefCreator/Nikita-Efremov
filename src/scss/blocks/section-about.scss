@@ -1,8 +1,8 @@
 .about{
-    padding: 100px 0;
+    padding: clamp(1.875rem, -0.75rem + 14vw, 6.25rem) 0;
     overflow: hidden;
     @media (max-width:980px) {
-        padding: 100px 0 0 0;
+        padding: clamp(1.875rem, -0.75rem + 14vw, 6.25rem) 0 0 0;
     }
     &__title{
         margin-bottom: clamp(1.25rem, 0.446rem + 4.29vw, 3.125rem);

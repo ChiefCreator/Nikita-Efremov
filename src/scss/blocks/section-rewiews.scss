@@ -1,5 +1,5 @@
 .rewiews{
-    padding-bottom: 100px;
+    padding-bottom: clamp(1.875rem, -0.75rem + 14vw, 6.25rem);
     &__head{
         display: flex;
         align-items: center;
