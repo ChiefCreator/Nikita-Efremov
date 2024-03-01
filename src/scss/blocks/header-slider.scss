@@ -7,7 +7,7 @@
     }
 }
 .header-slide{
-    padding: 80px 60px 200px clamp(5.625rem, -0.071rem + 11.39vw, 11.25rem);
+    padding: 80px 60px 175px clamp(5.625rem, -0.071rem + 11.39vw, 11.25rem);
     overflow: hidden;
     &__content{
         height: 100%;
@@ -61,16 +61,16 @@
 }
 @media (max-width:1000px) {
     .header-slide{
-        padding: 80px 60px 300px clamp(5.625rem, -0.071rem + 11.39vw, 11.25rem);
+        padding: 80px 60px 250px clamp(5.625rem, -0.071rem + 11.39vw, 11.25rem);
     }
 }
 @media (max-width:800px) {
     .header-slide{
-        padding: 80px 60px 200px clamp(0.625rem, -0.125rem + 4vw, 1.875rem);
+        padding: 80px 60px 300px clamp(0.625rem, -0.125rem + 4vw, 1.875rem);
     }
 }
 @media (max-width:620px) {
     .header-slide{
-        padding: 80px 60px 400px clamp(0.625rem, -0.125rem + 4vw, 1.875rem);
+        padding: 80px 60px 300px clamp(0.625rem, -0.125rem + 4vw, 1.875rem);
     }
 }

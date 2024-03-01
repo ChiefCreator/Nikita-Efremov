@@ -14,7 +14,7 @@
 <body class="body body_white">
     <div class="over"></div>
     <div class="pop-up">
-        <form class="pop-up__main-form main-form">
+        <form class="pop-up__main-form main-form" novalidate>
     <header class="main-form__head">
         <h4 class="main-form__title">Обратная связь</h4>
         <span class="main-form__close"></span>
@@ -94,24 +94,37 @@
         <div class="main-form__body main-form__body_send" id="circ-3">
             <h5 class="main-form__sub-title">Забронируй съемку</h5>
             <div class="main-form__select-wrapper">
-                <div class="input-container-form input-container-form_mb">
-                    <div class="input-container-form__icon"></div>
-                    <div class="input-container-form__wrapper">
-                        <input class="input-container-form__input" required>
-                        <label class="input-container-form__label">Введите имя</label>
+                <div class="main-form__inp-container input-container">
+                    <div class="input-container__wrapper">
+                        <div class="input-container__icon"></div>
+                        <div class="input-container__error-clue">
+                            <span class="input-container__error-clue-text">Неверное имя</span>
+                        </div>
+                        <input class="input-container__input" name="form-3-name" required>
+                        <label class="input-container__label">Введите имя</label>
                     </div>
                 </div>
-                <div class="input-container-form input-container-form_mb">
-                    <div class="input-container-form__icon input-container-form__icon_tel"></div>
-                    <div class="input-container-form__wrapper">
-                        <input class="input-container-form__input" required>
-                        <label class="input-container-form__label">Введите номер</label>
+                <div class="main-form__inp-container input-container">
+                    <div class="input-container__wrapper">
+                        <div class="input-container__icon"></div>
+                        <div class="input-container__error-clue">
+                            <span class="input-container__error-clue-text">Неверное имя</span>
+                        </div>
+                        <input class="input-container__input" name="form-3-number" required>
+                        <label class="input-container__label">Введите номер</label>
                     </div>
                 </div>
-                <div class="main-form__calendar">
-                    <input class="date" id="date-form">
+                <div class="main-form__inp-container form-feedback__calendar">
+                    <div class="form-feedback__calendar-text-wrapper">
+                        <div class="form-feedback__calendar-icon"></div>
+                        <div class="form-feedback__error-clue">
+                            <span class="form-feedback__error-clue-text">Неверное имя</span>
+                        </div>
+                        <p class="form-feedback__calendar-text">Выберите дату</p>
+                    </div>
+                    <input class="date input-container__input" id="date-form" name="form-3-calendar">
                 </div>
-                <button class="main-form__btn button">Заказать</button>
+                <button class="main-form__button button" type="submit">Заказать cъемку</button>
             </div>   
         </div>
     </div>
@@ -175,20 +188,21 @@
             <button class="navigation__btn button navigation__btn_mobile-menu toggle-pop-up-main">Заказать</button>
         </div>
     </div>
-    <header class="header-portfolio">
+    <header class="header-pages">
         <div class="container">
-            <nav class="navigation">
-    <a href="#" class="navigation__logo logo"><span class="logo__left">NE</span><span class="logo__right">fremov</span></a>
+            <div class="header-page-content">
+                <nav class="navigation">
+    <a class="navigation__logo logo" href="./../index.html"><span class="logo__left">NE</span><span class="logo__right">fremov</span></a>
     <div class="navigation__menu">
         <ul class="navigation__list">
             <li class="navigation__item">
-                <a class="navigation__link">Услуги</a>
+                <a class="navigation__link" href="./../service.html">Услуги</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link">Портфолио</a>
+                <a class="navigation__link" href="./../portfolio.html">Портфолио</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link">Фотостудия</a>
+                <a class="navigation__link" href="./../photostudia.html">Фотостудия</a>
             </li>
             <li class="navigation__item">
                 <a class="navigation__link">Отзывы</a>
@@ -198,12 +212,20 @@
             </li>
         </ul>
     </div>
-    <button class="navigation__btn button navigation__btn_menu toggle-pop-up-main">Заказать</button>
+    <button class="navigation__btn button button_light navigation__btn_menu toggle-pop-up-main">Заказать</button>
     <div class="burger-btn"></div>
 </nav>
+                <div class="header-page-content__wrapper">
+                    <h2 class="header-page-content__title">Портфолио</h2>
+                    <p class="header-page-content__text">Мое портфолио - это возможность показать мой уникальный взгляд на окружающий мир</p>
+                    <section class="mouse">
+                        <a href="#sub-page"><span></span></a>
+                    </section>
+                </div>
+            </div>
         </div>
     </header>
-    <main class="portfolio-page">
+    <main class="sub-page">
         <div class="container">
             <section class="gallery">
                 <header class="gallery__head">
@@ -362,7 +384,176 @@
                 </div>
             </section>
         </div>
+        <section class="feedback">
+    <div class="container">
+        <header class="feedback__head">
+            <h2 class="feedback__title section-title">Обратная связь</h2>
+            <div class="feedback__change-form change-form">
+                <span class="change-form__title change-form__title_active">Забронировать</span>
+                <span class="change-form__title">Спросить</span>
+                <div class="change-form__line"></div>
+            </div>
+        </header>
+        <div class="feedback__wrapper">
+            <div class="feedback__content">
+                <form class="feedback__form form-feedback form-feedback_first" novalidate>
+                    <h3 class="form-feedback__title">Забронируй съемку</h3>
+                    <div class="form-feedback__body">
+                        <div class="form-feedback__content">
+                            <div class="input-container">
+                                <div class="input-container__wrapper">
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-1-name" required>
+                                    <label class="input-container__label">Введите имя</label>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-container__wrapper">
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-1-number" required>
+                                    <label class="input-container__label">Введите номер</label>
+                                </div>
+                            </div>
+                            <div class="form-feedback__calendar">
+                                <div class="form-feedback__calendar-text-wrapper">
+                                    <div class="form-feedback__calendar-icon"></div>
+                                    <div class="form-feedback__error-clue">
+                                        <span class="form-feedback__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <p class="form-feedback__calendar-text">Выберите дату</p>
+                                </div>
+                                <input class="date input-container__input" id="date" name="form-1-calendar">
+                            </div>
+                            <button class="form-feedback__button button" type="submit">Заказать cъемку</button>
+                        </div>
+                    </div>
+                </form>
+                <form class="feedback__form form-feedback form-feedback_second" novalidate>
+                    <h3 class="form-feedback__title">Задай вопрос</h3>
+                    <div class="form-feedback__body">
+                        <div class="form-feedback__content">
+                            <div class="input-container">
+                                <div class="input-container__wrapper">
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-2-name" required>
+                                    <label class="input-container__label">Введите имя</label>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-container__wrapper">
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-2-number" required>
+                                    <label class="input-container__label">Введите номер</label>
+                                </div>
+                            </div>
+                            <div class="textarrea-container">
+                                <textarea class="textarrea-container__textarrea" required></textarea>
+                                <label class="textarrea-container__label">Введите сообщение</label>
+                            </div>
+                            <button class="form-feedback__button button">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="feedback__tabs">
+                <div class="feedback__tab tab-feedback tab-feedback_act">
+                    <h3 class="tab-feedback__title">Бронь съемки</h3>
+                    <p class="tab-feedback__text">Вы можете забронировать фотосессию на любой удобный вам день</p>
+                </div>
+                <div class="feedback__tab tab-feedback">
+                    <h3 class="tab-feedback__title">Любой вопрос</h3>
+                    <p class="tab-feedback__text">Вы можете задать любой вопрос и мы ответим вам в течении 10 минут</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
+    <footer class="footer">
+        <div class="footer__wrapper">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__brand">
+                <a href="#" class="logo"><span class="logo__left">NE</span><span class="logo__right">fremov</span></a>
+            </div>
+            <nav class="footer__navigation footer-nav">
+                <div class="spoller">
+                    <div class="spoller__head">
+                        <span class="footer-nav__title">Навигация</span>
+                        <div class="spoller__arrow"></div>
+                    </div>
+                    <div class="spoller__body">
+                        <div class="spoller__content">
+                            <ul class="footer-nav__list">
+                                <li class="footer-nav__item">
+                                    <a class="footer-nav__link" href="#">Услуги</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a class="footer-nav__link" href="#">Портфолио</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a class="footer-nav__link" href="#">Фотостудия</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a class="footer-nav__link" href="#">Отзывы</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a class="footer-nav__link" href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="footer__contacts footer-contacts">
+                <div class="spoller">
+                    <div class="spoller__head">
+                        <span class="footer-contacts__title">Связь со мной</span>
+                        <div class="spoller__arrow"></div>
+                    </div>
+                    <div class="spoller__body">
+                        <div class="spoller__content">
+                            <ul class="footer-contacts__list">
+                                <li class="footer-contacts__item">
+                                    <a class="footer-contacts__link" href="tel:+375256075342">+375 (25) 607-53-42</a>
+                                </li>
+                                <li class="footer-contacts__item">
+                                    <a class="footer-contacts__link" href="mailto:nikitaefremov@mail.ru">nikitaefremov@mail.ru</a>
+                                </li>
+                            </ul>
+                            <div class="footer-social">
+                                <ul class="footer-social__list">
+                                    <li class="social-header__item">
+                                        <a class="footer-social__link footer-social__link_inst" href="#"></a>
+                                    </li>
+                                    <li class="footer-social__item">
+                                        <a class="footer-social__link footer-social__link_facebook" href="#"></a>
+                                    </li>
+                                    <li class="footer-social__item">
+                                        <a class="footer-social__link footer-social__link_twitter" href="#"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/portfolio.bundle.js"></script>
 </body>

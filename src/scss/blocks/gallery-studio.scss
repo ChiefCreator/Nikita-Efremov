@@ -1,0 +1,46 @@
+.studio{
+    &__title{
+        width: 100%;
+        text-align: center;
+        margin: clamp(1.25rem, 0.378rem + 4.65vw, 5rem) 0;
+        color: white;
+        font-size: clamp(1.563rem, 1.199rem + 1.94vw, 3.125rem);
+        letter-spacing: clamp(0rem, -0.291rem + 1.55vw, 1.25rem);
+        text-transform: uppercase;
+    }
+    &__gallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+        grid-auto-rows: auto;
+        grid-auto-flow: dense;
+        gap: 30px;
+        @media (max-width: 450px) {
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        }
+    }
+    &__img{
+        max-height: 450px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform .3s ease;
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+        &:first-child {
+            grid-column: span 2;
+            @media (max-width: 850px) {
+                grid-column: span 1;
+            }
+        }
+        &:nth-child(4n) {
+            grid-column: span 2;
+            @media (max-width: 850px) {
+                grid-column: span 1;
+            }
+        }
+    }
+}

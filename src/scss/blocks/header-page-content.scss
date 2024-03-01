@@ -1,0 +1,109 @@
+.header-pages{
+    background-color: $bg-color;
+}
+.header-page-content{
+    min-height: 100vh;
+    overflow: hidden;
+    &__wrapper{
+        padding-top: clamp(0rem, -1.599rem + 8.53vw, 6.875rem);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__title{
+        text-align: center;
+        font-size: clamp(1.25rem, 0.087rem + 6.2vw, 6.25rem);
+        text-transform: uppercase;
+        letter-spacing: clamp(0rem, -0.291rem + 1.55vw, 1.25rem);
+        color: $green-color;
+        animation: anim-title .5s ease forwards;
+        @keyframes anim-title {
+            0%{
+                opacity: 0;
+                transform: translateX(-500px);
+            }
+            99%{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+    &__text{
+        text-align: center;
+        padding: 0 clamp(0rem, -1.453rem + 7.75vw, 6.25rem);
+        font-size: clamp(1rem, 0.651rem + 1.86vw, 2.5rem);
+        color: rgb(180, 180, 180);
+        animation: anim-text .5s ease forwards;
+        @keyframes anim-text {
+            0%{
+                opacity: 0;
+                transform: translateX(500px);
+            }
+            99%{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.mouse{
+    margin-top: clamp(1.875rem, 0.131rem + 9.3vw, 9.375rem);
+}
+.mouse a span {
+    display: block;
+    width: 30px;
+    height: 50px;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+    position: relative;
+  }
+.mouse a span::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: sdb10 2s infinite;
+    animation: sdb10 2s infinite;
+    box-sizing: border-box;
+  }
+  @-webkit-keyframes sdb10 {
+    0% {
+      -webkit-transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      -webkit-transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes sdb10 {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

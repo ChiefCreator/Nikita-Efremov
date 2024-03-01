@@ -5,7 +5,7 @@
         padding: 100px 0 0 0;
     }
     &__title{
-        margin-bottom: 50px;
+        margin-bottom: clamp(1.25rem, 0.446rem + 4.29vw, 3.125rem);
     }
     &__article{
         display: flex;
@@ -39,7 +39,7 @@
         right: 0;
         bottom:0;
         transform: translate(72%, 70%);
-        fill: rgb(255, 0, 0);
+        fill: $main-color;
         letter-spacing: 3.5px;
     }
     &__paragraphs{
@@ -47,7 +47,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        color: $light-color;
+        color: white;
         font-size: 17px;
         @media (max-width:980px) {
             flex: 0 1 auto;

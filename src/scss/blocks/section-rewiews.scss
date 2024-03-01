@@ -1,11 +1,11 @@
 .rewiews{
-    padding: 100px 0;
+    padding-bottom: 100px;
     &__head{
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 20px;
-        margin-bottom: 50px;
+        margin-bottom: clamp(1.25rem, 0.446rem + 4.29vw, 3.125rem);
     }
 }
 .rewiews-swiper{
@@ -37,7 +37,7 @@
         }
     }
     &__text{
-        color: $light-color;
+        color: white;
     }
     &__img{
         flex: 0 1 50%;
@@ -58,7 +58,7 @@
     &__button{
         width: 40px;
         height: 40px;
-        background-color: rgba(139, 139, 139, 0.3);
+        background-color: $muted-bg-color;
         backdrop-filter: blur(2px);
         cursor: pointer;
         transition: transform .3s ease;
@@ -92,7 +92,7 @@
         .swiper-pagination-bullet{
             width: 30px;
             height: 2px;
-            background-color: $light-color;
+            background-color: #b2b2b2;
             border-radius: 0;
             position: relative;
             margin: 0 8px !important;

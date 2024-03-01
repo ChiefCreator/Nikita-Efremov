@@ -1,6 +1,8 @@
 function animImg() {
+
     let imgs = document.querySelectorAll(".anim-img");
     if (imgs.length > 0) {
+        animOnScroll();
         window.addEventListener("scroll", animOnScroll);
         function animOnScroll() {
             for (let i = 0;i < imgs.length; i++) {
@@ -52,7 +54,7 @@ function animImg() {
                     el.classList.add("anim-img-right_act");
                 }
             },el.dataset.delay)
-        }
+    }
 }
 
 export default animImg;

@@ -10,46 +10,65 @@
         </header>
         <div class="feedback__wrapper">
             <div class="feedback__content">
-                <form class="feedback__form form-feedback form-feedback_first">
+                <form class="feedback__form form-feedback form-feedback_first" novalidate>
                     <h3 class="form-feedback__title">Забронируй съемку</h3>
                     <div class="form-feedback__body">
                         <div class="form-feedback__content">
                             <div class="input-container">
-                                <div class="input-container__icon"></div>
                                 <div class="input-container__wrapper">
-                                    <input class="input-container__input" required>
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-1-name" required>
                                     <label class="input-container__label">Введите имя</label>
                                 </div>
                             </div>
                             <div class="input-container">
-                                <div class="input-container__icon input-container__icon_tel"></div>
                                 <div class="input-container__wrapper">
-                                    <input class="input-container__input" required>
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-1-number" required>
                                     <label class="input-container__label">Введите номер</label>
                                 </div>
                             </div>
                             <div class="form-feedback__calendar">
-                                <input class="date" id="date">
+                                <div class="form-feedback__calendar-text-wrapper">
+                                    <div class="form-feedback__calendar-icon"></div>
+                                    <div class="form-feedback__error-clue">
+                                        <span class="form-feedback__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <p class="form-feedback__calendar-text">Выберите дату</p>
+                                </div>
+                                <input class="date input-container__input" id="date" name="form-1-calendar">
                             </div>
-                            <button class="form-feedback__button button">Заказать cъемку</button>
+                            <button class="form-feedback__button button" type="submit">Заказать cъемку</button>
                         </div>
                     </div>
                 </form>
-                <form class="feedback__form form-feedback form-feedback_second">
+                <form class="feedback__form form-feedback form-feedback_second" novalidate>
                     <h3 class="form-feedback__title">Задай вопрос</h3>
                     <div class="form-feedback__body">
                         <div class="form-feedback__content">
                             <div class="input-container">
-                                <div class="input-container__icon"></div>
                                 <div class="input-container__wrapper">
-                                    <input class="input-container__input" required>
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-2-name" required>
                                     <label class="input-container__label">Введите имя</label>
                                 </div>
                             </div>
                             <div class="input-container">
-                                <div class="input-container__icon input-container__icon_tel"></div>
                                 <div class="input-container__wrapper">
-                                    <input class="input-container__input" required>
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-2-number" required>
                                     <label class="input-container__label">Введите номер</label>
                                 </div>
                             </div>
@@ -62,16 +81,15 @@
                     </div>
                 </form>
             </div>
-            <div class="feedback__photo-wrapper">
-                <div class="feedback__photo">
-                    <img class="anim-img anim-img-right" src="./../../img/gallery-7.jpg">
+            <div class="feedback__tabs">
+                <div class="feedback__tab tab-feedback tab-feedback_act">
+                    <h3 class="tab-feedback__title">Бронь съемки</h3>
+                    <p class="tab-feedback__text">Вы можете забронировать фотосессию на любой удобный вам день</p>
                 </div>
-                <svg class="feedback__circle-text circle-text" viewBox="0 0 150 150">
-                    <path class="circle-text__path" id="circle-text" d="M 0,150 a 150,150 0 1,1 0,1 z" />
-                    <text>
-                      <textPath xlink:href="#circle-text">Nikita Efremov Nikita</textPath>
-                    </text>
-                </svg>
+                <div class="feedback__tab tab-feedback">
+                    <h3 class="tab-feedback__title">Любой вопрос</h3>
+                    <p class="tab-feedback__text">Вы можете задать любой вопрос и мы ответим вам в течении 10 минут</p>
+                </div>
             </div>
         </div>
     </div>

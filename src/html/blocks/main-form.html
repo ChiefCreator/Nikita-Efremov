@@ -1,4 +1,4 @@
-<form class="pop-up__main-form main-form">
+<form class="pop-up__main-form main-form" novalidate>
     <header class="main-form__head">
         <h4 class="main-form__title">Обратная связь</h4>
         <span class="main-form__close"></span>
@@ -78,24 +78,37 @@
         <div class="main-form__body main-form__body_send" id="circ-3">
             <h5 class="main-form__sub-title">Забронируй съемку</h5>
             <div class="main-form__select-wrapper">
-                <div class="input-container-form input-container-form_mb">
-                    <div class="input-container-form__icon"></div>
-                    <div class="input-container-form__wrapper">
-                        <input class="input-container-form__input" required>
-                        <label class="input-container-form__label">Введите имя</label>
+                <div class="main-form__inp-container input-container">
+                    <div class="input-container__wrapper">
+                        <div class="input-container__icon"></div>
+                        <div class="input-container__error-clue">
+                            <span class="input-container__error-clue-text">Неверное имя</span>
+                        </div>
+                        <input class="input-container__input" name="form-3-name" required>
+                        <label class="input-container__label">Введите имя</label>
                     </div>
                 </div>
-                <div class="input-container-form input-container-form_mb">
-                    <div class="input-container-form__icon input-container-form__icon_tel"></div>
-                    <div class="input-container-form__wrapper">
-                        <input class="input-container-form__input" required>
-                        <label class="input-container-form__label">Введите номер</label>
+                <div class="main-form__inp-container input-container">
+                    <div class="input-container__wrapper">
+                        <div class="input-container__icon"></div>
+                        <div class="input-container__error-clue">
+                            <span class="input-container__error-clue-text">Неверное имя</span>
+                        </div>
+                        <input class="input-container__input" name="form-3-number" required>
+                        <label class="input-container__label">Введите номер</label>
                     </div>
                 </div>
-                <div class="main-form__calendar">
-                    <input class="date" id="date-form">
+                <div class="main-form__inp-container form-feedback__calendar">
+                    <div class="form-feedback__calendar-text-wrapper">
+                        <div class="form-feedback__calendar-icon"></div>
+                        <div class="form-feedback__error-clue">
+                            <span class="form-feedback__error-clue-text">Неверное имя</span>
+                        </div>
+                        <p class="form-feedback__calendar-text">Выберите дату</p>
+                    </div>
+                    <input class="date input-container__input" id="date-form" name="form-3-calendar">
                 </div>
-                <button class="main-form__btn button">Заказать</button>
+                <button class="main-form__button button" type="submit">Заказать cъемку</button>
             </div>   
         </div>
     </div>

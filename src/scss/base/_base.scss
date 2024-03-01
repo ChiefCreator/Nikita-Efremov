@@ -3,10 +3,8 @@ html{
 }
 .body{
     font-family: $main-font;
-    background-color: rgb(44, 45, 50);
-    &_white{
-        background-color: white;
-    }
+    background-color: rgb(45, 45, 45);
+    background-color: $bg-color;
     &_lock{
         overflow: hidden;
     }

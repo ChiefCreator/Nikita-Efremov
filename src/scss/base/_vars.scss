@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 $main-font: "Montserrat";
 
-$light-color: rgb(215, 215, 215);
+// $light-color: rgb(215, 215, 215);
+$light-color: rgb(21, 21, 21);
 $dark-color: black;
 $muted-light-color: rgb(215, 213, 213);
-$main-color: red;
+$main-color: rgb(198, 18, 18);
 
 $light-bg: white;
 $dark-bg: black;
 $muted-light-bg: rgb(215, 213, 213);
-$main-bg: red;
+$main-bg: rgb(198, 18, 18);
+
+$green-color: #3f4331;
+// $bg-color: #cacaca;
+$bg-color: rgb(33, 33, 33);
+$muted-bg-color: rgb(60, 60, 60);

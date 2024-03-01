@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="body">
+    <div class="over"></div>
+    <div class="pop-up">
+        <form class="pop-up__main-form main-form" novalidate>
+    <header class="main-form__head">
+        <h4 class="main-form__title">Обратная связь</h4>
+        <span class="main-form__close"></span>
+    </header>
+    <div class="main-form__body-wrapper">
+        <div class="main-form__body main-form__body_calculation main-form__body_act" id="circ-1">
+            <h5 class="main-form__sub-title">Рассчитайте стоимость</h5>
+            <div class="main-form__select-wrapper">
+                <p class="main-form__inp-text">Выберите услугу</p>
+                <div class="dropdown-select">
+                    <button class="dropdown-select__button" data-lang="switch-lang" type="button">Вид услуги</button>
+                    <div class="dropdown-select__grid">
+                        <ul class="dropdown-select__list">
+                            <li class="dropdown-select__item" data-value="20" data-identificator="item1">Прогулка</li>
+                            <li class="dropdown-select__item" data-value="20" data-identificator="item1">Lifestyle</li>
+                            <li class="dropdown-select__item" data-value="10" data-identificator="item1">Индивидуальная съемка</li>
+                            <li class="dropdown-select__item" data-value="30" data-identificator="item1">Групповая фотоссесия</li>
+                            <li class="dropdown-select__item" data-value="10" data-identificator="item1">Портретная съемка</li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown-select__input">
+                    </div>
+                </div>
+            </div> 
+            <div class="main-form__select-wrapper">
+                <p class="main-form__inp-text">Выберите время съемки</p>
+                <div class="dropdown-select">
+                    <button class="dropdown-select__button" data-lang="switch-lang" type="button">Время съемки</button>
+                    <div class="dropdown-select__grid">
+                        <ul class="dropdown-select__list">
+                            <li class="dropdown-select__item" data-value="50" data-identificator="item2">1 час</li>
+                            <li class="dropdown-select__item" data-value="90" data-identificator="item2">2 часа</li>
+                            <li class="dropdown-select__item" data-value="130" data-identificator="item2">3 часа</li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown-select__input">
+                    </div>
+                </div>
+            </div>  
+            <div class="main-form__select-wrapper">
+                <p class="main-form__inp-text">Выберите кол-во фотографий в обработке</p>
+                <div class="dropdown-select">
+                    <button class="dropdown-select__button" data-lang="switch-lang" type="button">Кол-во фотографий в обработке</button>
+                    <div class="dropdown-select__grid">
+                        <ul class="dropdown-select__list">
+                            <li class="dropdown-select__item" data-value="10" data-identificator="item3">10</li>
+                            <li class="dropdown-select__item" data-value="20" data-identificator="item3">20</li>
+                            <li class="dropdown-select__item" data-value="30" data-identificator="item3">30</li>
+                            <li class="dropdown-select__item" data-value="50" data-identificator="item3">50</li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown-select__input">
+                    </div>
+                </div>
+            </div>  
+            <div class="main-form__select-wrapper">
+                <p class="main-form__inp-text">Выберите исходники</p>
+                <div class="dropdown-select">
+                    <button class="dropdown-select__button" data-lang="switch-lang" type="button">Исходники</button>
+                    <div class="dropdown-select__grid">
+                        <ul class="dropdown-select__list">
+                            <li class="dropdown-select__item" data-value="0" data-identificator="item4">Нет</li>
+                            <li class="dropdown-select__item" data-value="5" data-identificator="item4">Да</li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown-select__input">
+                    </div>
+                </div>
+            </div>   
+            <div class="main-form__total total">
+                <p class="total__text">Итого: <span class="total__cost">0</span> рублей</p>
+            </div>
+        </div>
+        <div class="main-form__body main-form__body_ask" id="circ-2">
+            <h5 class="main-form__sub-title">Задайте вопрос (необязательно)</h5>
+            <div class="textarrea-container-form">
+                <textarea class="textarrea-container-form__textarrea" required></textarea>
+                <label class="textarrea-container-form__label">Введите сообщение</label>
+            </div>
+        </div>
+        <div class="main-form__body main-form__body_send" id="circ-3">
+            <h5 class="main-form__sub-title">Забронируй съемку</h5>
+            <div class="main-form__select-wrapper">
+                <div class="main-form__inp-container input-container">
+                    <div class="input-container__wrapper">
+                        <div class="input-container__icon"></div>
+                        <div class="input-container__error-clue">
+                            <span class="input-container__error-clue-text">Неверное имя</span>
+                        </div>
+                        <input class="input-container__input" name="form-3-name" required>
+                        <label class="input-container__label">Введите имя</label>
+                    </div>
+                </div>
+                <div class="main-form__inp-container input-container">
+                    <div class="input-container__wrapper">
+                        <div class="input-container__icon"></div>
+                        <div class="input-container__error-clue">
+                            <span class="input-container__error-clue-text">Неверное имя</span>
+                        </div>
+                        <input class="input-container__input" name="form-3-number" required>
+                        <label class="input-container__label">Введите номер</label>
+                    </div>
+                </div>
+                <div class="main-form__inp-container form-feedback__calendar">
+                    <div class="form-feedback__calendar-text-wrapper">
+                        <div class="form-feedback__calendar-icon"></div>
+                        <div class="form-feedback__error-clue">
+                            <span class="form-feedback__error-clue-text">Неверное имя</span>
+                        </div>
+                        <p class="form-feedback__calendar-text">Выберите дату</p>
+                    </div>
+                    <input class="date input-container__input" id="date-form" name="form-3-calendar">
+                </div>
+                <button class="main-form__button button" type="submit">Заказать cъемку</button>
+            </div>   
+        </div>
+    </div>
+    <footer class="main-form__footer footer-main-form">
+        <div class="footer-main-form__step-circle">
+            <div class="footer-main-form__circle footer-main-form__circle_act" data-form-id="#circ-1">
+                <span class="footer-main-form__index">01</span>
+                <div class="footer-main-form__circle-bg"></div>
+            </div>
+        </div>
+        <div class="footer-main-form__step-line">
+            <div class="footer-main-form__line">
+                <div class="footer-main-form__line-bg"></div>
+            </div>
+        </div>
+        <div class="footer-main-form__step-circle">
+            <div class="footer-main-form__circle" data-form-id="#circ-2">
+                <span class="footer-main-form__index">02</span>
+                <div class="footer-main-form__circle-bg"></div>
+            </div>
+        </div>
+        <div class="footer-main-form__step-line">
+            <div class="footer-main-form__line">
+                <div class="footer-main-form__line-bg"></div>
+            </div>
+        </div>
+        <div class="footer-main-form__step-circle">
+            <div class="footer-main-form__circle" data-form-id="#circ-3">
+                <span class="footer-main-form__index">03</span>
+                <div class="footer-main-form__circle-bg"></div>
+            </div>
+        </div>
+    </footer>
+</form>
+    </div>
+    <div class="mobile-menu">
+        <header class="mobile-menu__head">
+            <h4 class="mobile-menu__title">Меню</h4>
+            <span class="mobile-menu__close"></span>
+        </header>
+        <div class="mobile-menu__body">
+            <nav class="mobile-menu__nav">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Услуги</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Фотостудия</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Отзывы</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="navigation__btn button navigation__btn_mobile-menu toggle-pop-up-main">Заказать</button>
+        </div>
+    </div>
+    <header class="header-pages">
+        <div class="container">
+            <div class="header-page-content">
+                <nav class="navigation">
+    <a class="navigation__logo logo" href="./../index.html"><span class="logo__left">NE</span><span class="logo__right">fremov</span></a>
+    <div class="navigation__menu">
+        <ul class="navigation__list">
+            <li class="navigation__item">
+                <a class="navigation__link" href="./../service.html">Услуги</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="./../portfolio.html">Портфолио</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="./../photostudia.html">Фотостудия</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link">Отзывы</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link">Контакты</a>
+            </li>
+        </ul>
+    </div>
+    <button class="navigation__btn button button_light navigation__btn_menu toggle-pop-up-main">Заказать</button>
+    <div class="burger-btn"></div>
+</nav>
+                <div class="header-page-content__wrapper">
+                    <h2 class="header-page-content__title">Наши услуги</h2>
+                    <p class="header-page-content__text">Фотография - это возможность запечатлеть незабываемые моменты жизни, сохранить яркие воспоминания и передать глубокие эмоции.</p>
+                    <section class="mouse">
+                        <a href="#sub-page"><span></span></a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="sub-page" id="sub-page">
+        <section class="service" id="section-service">
+    <div class="container"> 
+        <a href="#section-service"><h2 class="service__title section-title">Наши услуги</h2></a>
+    </div>
+    <div class="service__list">
+        <div class="container container_change">
+            <div class="service__item service-block">
+                <div class="service-block__body">
+                    <div class="service-block__content service-block__content_first">
+                        <header class="service-block__head">
+                            <h3 class="service-block__title">Прогулка</h3>
+                        </header>
+                        <p class="service-block__text">Во время прогулки мы сделаем фотографии, которые вы запомните надолго, максимально живые и естественные</p>
+                        <footer class="service-block__footer">
+                            <button class="service-block__button button toggle-pop-up-main">Узнать цены и заказать</button>
+                        </footer>
+                    </div>
+                </div>
+                <div class="service-block__img">
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__photo">
+                        <img class="anim-img anim-img-left" src="./../../img/good-humoured-girl-long-coat-smiling-street-well-dressed-european-woman-spending-time-city_197531-11291.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="service__item service-block service-block_reverse">
+                <div class="service-block__body service-block__body_orange">
+                    <div class="service-block__content service-block__content_first">
+                        <header class="service-block__head">
+                            <h3 class="service-block__title">Lifestyle</h3>
+                        </header>
+                        <p class="service-block__text">Много фотограций в разных интерьерах отражают ваши будни и отлично подходят для публикации в соцсетях</p>
+                        <footer class="service-block__footer">
+                            <button class="service-block__button button toggle-pop-up-main">Узнать цены и заказать</button>
+                        </footer>
+                    </div>
+                </div>
+                <div class="service-block__img service-block__img_reverse">
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__photo">
+                        <img class="anim-img anim-img-right" src="./../img/section-service-img-2.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="service__item service-block">
+                <div class="service-block__body service-block__body_gray">
+                    <div class="service-block__content service-block__content_first">
+                        <header class="service-block__head">
+                            <h3 class="service-block__title">Индивидуальная съемка</h3>
+                        </header>
+                        <p class="service-block__text">Индивидуальная съемка - это прекрасная возможность отвлечься от повседневной суеты и по-новому взглянуть на себя</p>
+                        <footer class="service-block__footer">
+                            <button class="service-block__button button toggle-pop-up-main">Узнать цены и заказать</button>
+                        </footer>
+                    </div>
+                </div>
+                <div class="service-block__img">
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__photo">
+                        <img class="anim-img anim-img-left" src="./../../img/portrait-successful-young-seductive-blonde-woman-pink-pastel-jacket-sitting-table_273443-2258.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="service__item service-block service-block_reverse">
+                <div class="service-block__body service-block__body_blue">
+                    <div class="service-block__content service-block__content_first">
+                        <header class="service-block__head">
+                            <h3 class="service-block__title">Групповая фотосессия</h3>
+                        </header>
+                        <p class="service-block__text">Фотосессия в паре с друзьями, родственниками, коллегами или любыми другими людьми позволяет сохранить и запомнить важные моменты из жизни</p>
+                        <footer class="service-block__footer">
+                            <button class="service-block__button button toggle-pop-up-main">Узнать цены и заказать</button>
+                        </footer>
+                    </div>
+                </div>
+                <div class="service-block__img service-block__img_reverse">
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__photo">
+                        <img class="anim-img anim-img-right" src="./../img/section-service-img-4.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="service__item service-block">
+                <div class="service-block__body service-block__body_dark">
+                    <div class="service-block__content service-block__content_first">
+                        <header class="service-block__head">
+                            <h3 class="service-block__title">Портретная съемка</h3>
+                        </header>
+                        <p class="service-block__text">Профессиональная портретная фотосъемка позволяет сделать акцент на наиболее значимых чертах характера конкретной личности, отодвигая остальные на второй план, а то и вовсе убирая их из кадра</p>
+                        <footer class="service-block__footer">
+                            <button class="service-block__button button toggle-pop-up-main">Узнать цены и заказать</button>
+                        </footer>
+                    </div>
+                </div>
+                <div class="service-block__img">
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__photo">
+                        <img class="anim-img anim-img-left" src="./../img/section-service-img-5.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="feedback">
+    <div class="container">
+        <header class="feedback__head">
+            <h2 class="feedback__title section-title">Обратная связь</h2>
+            <div class="feedback__change-form change-form">
+                <span class="change-form__title change-form__title_active">Забронировать</span>
+                <span class="change-form__title">Спросить</span>
+                <div class="change-form__line"></div>
+            </div>
+        </header>
+        <div class="feedback__wrapper">
+            <div class="feedback__content">
+                <form class="feedback__form form-feedback form-feedback_first" novalidate>
+                    <h3 class="form-feedback__title">Забронируй съемку</h3>
+                    <div class="form-feedback__body">
+                        <div class="form-feedback__content">
+                            <div class="input-container">
+                                <div class="input-container__wrapper">
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-1-name" required>
+                                    <label class="input-container__label">Введите имя</label>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-container__wrapper">
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-1-number" required>
+                                    <label class="input-container__label">Введите номер</label>
+                                </div>
+                            </div>
+                            <div class="form-feedback__calendar">
+                                <div class="form-feedback__calendar-text-wrapper">
+                                    <div class="form-feedback__calendar-icon"></div>
+                                    <div class="form-feedback__error-clue">
+                                        <span class="form-feedback__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <p class="form-feedback__calendar-text">Выберите дату</p>
+                                </div>
+                                <input class="date input-container__input" id="date" name="form-1-calendar">
+                            </div>
+                            <button class="form-feedback__button button" type="submit">Заказать cъемку</button>
+                        </div>
+                    </div>
+                </form>
+                <form class="feedback__form form-feedback form-feedback_second" novalidate>
+                    <h3 class="form-feedback__title">Задай вопрос</h3>
+                    <div class="form-feedback__body">
+                        <div class="form-feedback__content">
+                            <div class="input-container">
+                                <div class="input-container__wrapper">
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-2-name" required>
+                                    <label class="input-container__label">Введите имя</label>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-container__wrapper">
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-2-number" required>
+                                    <label class="input-container__label">Введите номер</label>
+                                </div>
+                            </div>
+                            <div class="textarrea-container">
+                                <textarea class="textarrea-container__textarrea" required></textarea>
+                                <label class="textarrea-container__label">Введите сообщение</label>
+                            </div>
+                            <button class="form-feedback__button button">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="feedback__tabs">
+                <div class="feedback__tab tab-feedback tab-feedback_act">
+                    <h3 class="tab-feedback__title">Бронь съемки</h3>
+                    <p class="tab-feedback__text">Вы можете забронировать фотосессию на любой удобный вам день</p>
+                </div>
+                <div class="feedback__tab tab-feedback">
+                    <h3 class="tab-feedback__title">Любой вопрос</h3>
+                    <p class="tab-feedback__text">Вы можете задать любой вопрос и мы ответим вам в течении 10 минут</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__brand">
+                <a href="#" class="logo"><span class="logo__left">NE</span><span class="logo__right">fremov</span></a>
+            </div>
+            <nav class="footer__navigation footer-nav">
+                <div class="spoller">
+                    <div class="spoller__head">
+                        <span class="footer-nav__title">Навигация</span>
+                        <div class="spoller__arrow"></div>
+                    </div>
+                    <div class="spoller__body">
+                        <div class="spoller__content">
+                            <ul class="footer-nav__list">
+                                <li class="footer-nav__item">
+                                    <a class="footer-nav__link" href="#">Услуги</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a class="footer-nav__link" href="#">Портфолио</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a class="footer-nav__link" href="#">Фотостудия</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a class="footer-nav__link" href="#">Отзывы</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a class="footer-nav__link" href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="footer__contacts footer-contacts">
+                <div class="spoller">
+                    <div class="spoller__head">
+                        <span class="footer-contacts__title">Связь со мной</span>
+                        <div class="spoller__arrow"></div>
+                    </div>
+                    <div class="spoller__body">
+                        <div class="spoller__content">
+                            <ul class="footer-contacts__list">
+                                <li class="footer-contacts__item">
+                                    <a class="footer-contacts__link" href="tel:+375256075342">+375 (25) 607-53-42</a>
+                                </li>
+                                <li class="footer-contacts__item">
+                                    <a class="footer-contacts__link" href="mailto:nikitaefremov@mail.ru">nikitaefremov@mail.ru</a>
+                                </li>
+                            </ul>
+                            <div class="footer-social">
+                                <ul class="footer-social__list">
+                                    <li class="social-header__item">
+                                        <a class="footer-social__link footer-social__link_inst" href="#"></a>
+                                    </li>
+                                    <li class="footer-social__item">
+                                        <a class="footer-social__link footer-social__link_facebook" href="#"></a>
+                                    </li>
+                                    <li class="footer-social__item">
+                                        <a class="footer-social__link footer-social__link_twitter" href="#"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/service.bundle.js"></script>
+</body>

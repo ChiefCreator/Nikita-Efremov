@@ -1,69 +1,26 @@
-let select = document.querySelector(".gallery .dropdown-select_portfolio");
-
-const dropdownButton = document.querySelector(".gallery .dropdown-select__button")
-const dropdownGrid = document.querySelector(".gallery .dropdown-select__grid")
-const dropdownList = document.querySelector(".gallery .dropdown-select__list")
-const dropdownListItems =  document.querySelectorAll(".gallery .dropdown-select__item")
-const dropdownInput = document.querySelector(".gallery .dropdown-select__input")
-
-if (localStorage.getItem("portfolio")) {
-    dropdownButton.textContent = document.querySelector(`[data-value='${localStorage.getItem("portfolio")}']`).textContent
-    dropdownInput.value = localStorage.getItem("portfolio")
-
-    let imgs = document.querySelectorAll(".gallery__item");
-        imgs.forEach(img => {
-            img.classList.add("gallery__item_hidden");
-            if (img.dataset.category && img.dataset.category.includes(localStorage.getItem("portfolio"))) {
-                img.classList.remove("gallery__item_hidden");
-            }
-            if (localStorage.getItem("portfolio") && localStorage.getItem("portfolio") == "all") img.classList.remove("gallery__item_hidden");
-        })
-}
-
-dropdownButton.addEventListener("click", function() {
-    dropdownGrid.classList.toggle("dropdown-select__grid_visible")
-    dropdownList.classList.toggle("dropdown-select__list_visible")
-    console.log(dropdownGrid)
-    this.classList.add("dropdown-select__button_active");
-})
-
-dropdownListItems.forEach(item => {
-    item.addEventListener("click", function (e) {
-        e.stopPropagation();
-        dropdownButton.textContent = this.textContent;
-        dropdownButton.focus();
-        closeSelect();
-        dropdownInput.value = item.dataset.value;
-
-        let imgs = document.querySelectorAll(".gallery__item");
-        imgs.forEach(img => {
-            img.classList.add("gallery__item_hidden");
-            if (img.dataset.category && img.dataset.category.includes(dropdownInput.value)) {
-                img.classList.remove("gallery__item_hidden");
-            }
-            if (dropdownInput.value && dropdownInput.value == "all") img.classList.remove("gallery__item_hidden");
-        })
-    })
-})
-
-document.addEventListener("click", function(e) {
-    if (e.target != dropdownButton) {
-        dropdownButton.classList.remove("dropdown-select__button_active")
-        closeSelect()
-    }
-})
-
-function closeSelect() {
-    dropdownGrid.classList.remove("dropdown-select__grid_visible")
-    dropdownList.classList.remove("dropdown-select__list_visible")
-}
-
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 
+new AirDatepicker('#date', {
+    inline: true,
+    onSelect({date, formattedDate, datepicker}) {
+        let input = document.querySelector("#date");
+        let icon = input.parentElement.querySelector(".form-feedback__calendar-icon");
+        let clue = input.parentElement.querySelector(".form-feedback__error-clue");
+        if (input.value != "") {
+            icon.classList.remove("icon-error");
+            icon.addEventListener("mouseenter", function() {
+                clue.classList.remove("clue-error");
+            })
+        }
+    }
+})
 new AirDatepicker('#date-form', {
     inline: true
 })
+
+import select from "./modules/select";
+select();
 
 import popUpToggle from "./modules/open-pop-up";
 popUpToggle();
@@ -73,6 +30,12 @@ serviceItemCost();
 
 import changeForm from "./modules/main-form";
 changeForm();
+
+import validation from "./modules/validation-form";
+validation();
+
+import feedback from "./modules/feedback";
+feedback();
 
 import spollers from "./modules/spollers";
 spollers();

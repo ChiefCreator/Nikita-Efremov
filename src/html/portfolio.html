@@ -44,12 +44,21 @@
             <button class="navigation__btn button navigation__btn_mobile-menu toggle-pop-up-main">Заказать</button>
         </div>
     </div>
-    <header class="header-portfolio">
+    <header class="header-pages">
         <div class="container">
-            @@include("./blocks/navigation.html")
+            <div class="header-page-content">
+                @@include("./blocks/navigation.html")
+                <div class="header-page-content__wrapper">
+                    <h2 class="header-page-content__title">Портфолио</h2>
+                    <p class="header-page-content__text">Мое портфолио - это возможность показать мой уникальный взгляд на окружающий мир</p>
+                    <section class="mouse">
+                        <a href="#sub-page"><span></span></a>
+                    </section>
+                </div>
+            </div>
         </div>
     </header>
-    <main class="portfolio-page">
+    <main class="sub-page">
         <div class="container">
             <section class="gallery">
                 <header class="gallery__head">
@@ -208,7 +217,11 @@
                 </div>
             </section>
         </div>
+        @@include("./blocks/section-feedback.html")
     </main>
+    <footer class="footer">
+        @@include("./blocks/footer.html")
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/portfolio.bundle.js"></script>
 </body>

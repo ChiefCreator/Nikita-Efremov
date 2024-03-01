@@ -14,7 +14,7 @@
 <body class="body">
     <div class="over"></div>
     <div class="pop-up">
-        <form class="pop-up__main-form main-form">
+        <form class="pop-up__main-form main-form" novalidate>
     <header class="main-form__head">
         <h4 class="main-form__title">Обратная связь</h4>
         <span class="main-form__close"></span>
@@ -94,24 +94,37 @@
         <div class="main-form__body main-form__body_send" id="circ-3">
             <h5 class="main-form__sub-title">Забронируй съемку</h5>
             <div class="main-form__select-wrapper">
-                <div class="input-container-form input-container-form_mb">
-                    <div class="input-container-form__icon"></div>
-                    <div class="input-container-form__wrapper">
-                        <input class="input-container-form__input" required>
-                        <label class="input-container-form__label">Введите имя</label>
+                <div class="main-form__inp-container input-container">
+                    <div class="input-container__wrapper">
+                        <div class="input-container__icon"></div>
+                        <div class="input-container__error-clue">
+                            <span class="input-container__error-clue-text">Неверное имя</span>
+                        </div>
+                        <input class="input-container__input" name="form-3-name" required>
+                        <label class="input-container__label">Введите имя</label>
                     </div>
                 </div>
-                <div class="input-container-form input-container-form_mb">
-                    <div class="input-container-form__icon input-container-form__icon_tel"></div>
-                    <div class="input-container-form__wrapper">
-                        <input class="input-container-form__input" required>
-                        <label class="input-container-form__label">Введите номер</label>
+                <div class="main-form__inp-container input-container">
+                    <div class="input-container__wrapper">
+                        <div class="input-container__icon"></div>
+                        <div class="input-container__error-clue">
+                            <span class="input-container__error-clue-text">Неверное имя</span>
+                        </div>
+                        <input class="input-container__input" name="form-3-number" required>
+                        <label class="input-container__label">Введите номер</label>
                     </div>
                 </div>
-                <div class="main-form__calendar">
-                    <input class="date" id="date-form">
+                <div class="main-form__inp-container form-feedback__calendar">
+                    <div class="form-feedback__calendar-text-wrapper">
+                        <div class="form-feedback__calendar-icon"></div>
+                        <div class="form-feedback__error-clue">
+                            <span class="form-feedback__error-clue-text">Неверное имя</span>
+                        </div>
+                        <p class="form-feedback__calendar-text">Выберите дату</p>
+                    </div>
+                    <input class="date input-container__input" id="date-form" name="form-3-calendar">
                 </div>
-                <button class="main-form__btn button">Заказать</button>
+                <button class="main-form__button button" type="submit">Заказать cъемку</button>
             </div>   
         </div>
     </div>
@@ -183,8 +196,8 @@
                 <h1 class="header-slide__title" data-swiper-parallax="-40%"data-swiper-parallax-duration="600">Efremov</h1>
                 <p class="header-slide__text header-slide__text_first" data-swiper-parallax="40%"data-swiper-parallax-duration="600">Взгляните на мир через объектив моей камеры</p>
                 <p class="header-slide__text header-slide__text_second" data-swiper-parallax="40%"data-swiper-parallax-duration="600">Самые стильные съемки</p>
-                <div class="header-slide__button button-order">
-                    <button class="button-order__btn toggle-pop-up-main">Записаться</button>
+                <div class="header-slide__button button-header">
+                    <button class="button-header__btn toggle-pop-up-main">Записаться</button>
                 </div>
             </div>
         </div>
@@ -192,32 +205,32 @@
             <h1 class="header-slide__title" data-swiper-parallax="-40%"data-swiper-parallax-duration="600">Nikita</h1>
             <p class="header-slide__text header-slide__text_first" data-swiper-parallax="40%"data-swiper-parallax-duration="600">Фотосессии в Могилеве: в студии, на улице и других локациях</p>
             <p class="header-slide__text header-slide__text_second" data-swiper-parallax="40%"data-swiper-parallax-duration="600">Качественные и современные фотки</p>
-            <div class="header-slide__button button-order">
-                <button class="button-order__btn toggle-pop-up-main">Записаться</button>
-                <svg class="button-order__circle-text circle-text hide" viewBox="0 0 80 80">
-                    <path class="circle-text__path" id="circle-text" d="M 0,40 a 40,40 0 1,1 0,1 z" />
-                    <text>
-                      <textPath xlink:href="#circle-text">записаться записаться</textPath>
-                    </text>
-                </svg>
+            <div class="header-slide__button button-header">
+                <button class="button-header__btn toggle-pop-up-main">Записаться</button>
             </div>
+            <svg class="button-order__circle-text circle-text hide" viewBox="0 0 80 80">
+                <path class="circle-text__path" id="circle-text" d="M 0,40 a 40,40 0 1,1 0,1 z" />
+                <text>
+                  <textPath xlink:href="#circle-text">записаться записаться</textPath>
+                </text>
+            </svg>
         </div>
     </div>
 </div>
         <div class="header__content">
     <div class="header__nav">
         <nav class="navigation">
-    <a href="#" class="navigation__logo logo"><span class="logo__left">NE</span><span class="logo__right">fremov</span></a>
+    <a class="navigation__logo logo" href="./../index.html"><span class="logo__left">NE</span><span class="logo__right">fremov</span></a>
     <div class="navigation__menu">
         <ul class="navigation__list">
             <li class="navigation__item">
-                <a class="navigation__link">Услуги</a>
+                <a class="navigation__link" href="./../service.html">Услуги</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link">Портфолио</a>
+                <a class="navigation__link" href="./../portfolio.html">Портфолио</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link">Фотостудия</a>
+                <a class="navigation__link" href="./../photostudia.html">Фотостудия</a>
             </li>
             <li class="navigation__item">
                 <a class="navigation__link">Отзывы</a>
@@ -227,7 +240,7 @@
             </li>
         </ul>
     </div>
-    <button class="navigation__btn button navigation__btn_menu toggle-pop-up-main">Заказать</button>
+    <button class="navigation__btn button button_light navigation__btn_menu toggle-pop-up-main">Заказать</button>
     <div class="burger-btn"></div>
 </nav>
     </div>
@@ -297,8 +310,8 @@
                 <p class="about__text">Привет! Меня зовут Никита Ефремов - я фотограф из Могилева. Занимаюсь профессиональной фотографией уже 2 года.</p>
                 <p class="about__text">Для меня важно, чтобы люди получали положительные эмоции от фотографий.</p>
                 <p class="about__text">Именно поэтому в каждый кадр я вкладываю весь творческий потенциал и профессионализм.</p>
-                <a class="gallery-link" href="./../portfolio.html"><div class="about__button-order button-order">
-                    <button class="button-order__btn">Мое портфолио</button>
+                <a class="gallery-link" href="./../portfolio.html" data-category="all"><div class="about__button-order button-order">
+                    <button class="button">Мое портфолио</button>
                 </div></a>
             </div>
         </article>
@@ -323,18 +336,10 @@
                     </div>
                 </div>
                 <div class="service-block__img">
-                    <div class="service-block__line">
-                        <span class="service-block__num">160 PX</span> 
-                    </div>
-                    <div class="service-block__line">
-                        <span class="service-block__num">160 PX</span> 
-                    </div>
-                    <div class="service-block__line">
-                        <span class="service-block__num">160 PX</span> 
-                    </div>
-                    <div class="service-block__line">
-                        <span class="service-block__num">160 PX</span> 
-                    </div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
+                    <div class="service-block__line"></div>
                     <div class="service-block__photo">
                         <img class="anim-img anim-img-left" src="./../../img/good-humoured-girl-long-coat-smiling-street-well-dressed-european-woman-spending-time-city_197531-11291.jpg">
                     </div>
@@ -450,36 +455,33 @@
             <div class="road__circle circle-4"><span class="road__circle-bg"></span></div>
         </div>
         <div class="plan__body">
-            <div class="plan__img-wrapper">
-                <div class="plan__img anim-img anim-img-left">
-                    <img src="./../../img/young-handsome-businessman-black-shirt-black-suit_158595-4791.jpg">
-                </div>
-                <svg class="about__circle-text circle-text" viewBox="0 0 150 150">
-                    <path class="circle-text__path" id="circle-text" d="M 0,150 a 150,150 0 1,1 0,1 z" />
-                    <text>
-                      <textPath xlink:href="#circle-text">Nikita Efremov Nikita</textPath>
-                    </text>
-                </svg>
-            </div>
             <div class="plan__tabs tabs">
                 <div class="tabs__item tabs__item_act">
                     <h3 class="tabs__title">Знакомство</h3>
-                    <p class="tabs__text">Для меня важно узнать вас поближе и рассказать о себе, для того чтобы на съемке вам было комфортно</p>
+                    <div class="tabs__text-wrapper">
+                        <p class="tabs__text">Для меня важно узнать вас поближе и рассказать о себе, для того чтобы на съемке вам было комфортно</p>
+                    </div>
                     <span class="tabs__index">01</span>
                 </div>
                 <div class="tabs__item">
                     <h3 class="tabs__title">Концепция</h3>
-                    <p class="tabs__text">На данном этапе мы с вами обговариваем все детали, после чего я готовлю референсы</p>
+                    <div class="tabs__text-wrapper">
+                        <p class="tabs__text">На данном этапе мы с вами обговариваем все детали, после чего я готовлю референсы</p>
+                    </div>
                     <span class="tabs__index">02</span>
                 </div>
                 <div class="tabs__item">
                     <h3 class="tabs__title">Съемка</h3>
-                    <p class="tabs__text">Я дам вам все необходимые рекомендации, чтобы съемка прошла успешно со сменой локаций и образов</p>
+                    <div class="tabs__text-wrapper">
+                        <p class="tabs__text">Я дам вам все необходимые рекомендации, чтобы съемка прошла успешно со сменой локаций и образов</p>
+                    </div>
                     <span class="tabs__index">03</span>
                 </div>
                 <div class="tabs__item">
                     <h3 class="tabs__title">Фотографии</h3>
-                    <p class="tabs__text">Через пять дней вы получаете результат</p>
+                    <div class="tabs__text-wrapper">
+                        <p class="tabs__text">Через пять дней вы получаете результат</p>
+                    </div>
                     <span class="tabs__index">04</span>
                 </div>
             </div>
@@ -496,18 +498,10 @@
     <div class="portfolio__bg-wrapper">
         <div class="container">
             <div class="portfolio__wrapper">
-                <div class="portfolio__block">
-                    <span class="portfolio__block-num">340 PX</span>
-                </div>
-                <div class="portfolio__block">
-                    <span class="portfolio__block-num">340 PX</span>
-                </div>
-                <div class="portfolio__block">
-                    <span class="portfolio__block-num">340 PX</span>
-                </div>
-                <div class="portfolio__block">
-                    <span class="portfolio__block-num">340 PX</span>
-                </div>
+                <div class="portfolio__block"></div>
+                <div class="portfolio__block"></div>
+                <div class="portfolio__block"></div>
+                <div class="portfolio__block"></div>
                 <a class="portfolio__img-link portfolio__img-link_n1 gallery-link" href="./../portfolio.html" data-category="portrait">
                     <div class="portfolio__img-wrap anim-img anim-img-left">
                         <img src="./../../img/section-portfolio-1.jpg">
@@ -560,6 +554,102 @@
         </div>
     </div>
 </section>
+        <section class="feedback">
+    <div class="container">
+        <header class="feedback__head">
+            <h2 class="feedback__title section-title">Обратная связь</h2>
+            <div class="feedback__change-form change-form">
+                <span class="change-form__title change-form__title_active">Забронировать</span>
+                <span class="change-form__title">Спросить</span>
+                <div class="change-form__line"></div>
+            </div>
+        </header>
+        <div class="feedback__wrapper">
+            <div class="feedback__content">
+                <form class="feedback__form form-feedback form-feedback_first" novalidate>
+                    <h3 class="form-feedback__title">Забронируй съемку</h3>
+                    <div class="form-feedback__body">
+                        <div class="form-feedback__content">
+                            <div class="input-container">
+                                <div class="input-container__wrapper">
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-1-name" required>
+                                    <label class="input-container__label">Введите имя</label>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-container__wrapper">
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-1-number" required>
+                                    <label class="input-container__label">Введите номер</label>
+                                </div>
+                            </div>
+                            <div class="form-feedback__calendar">
+                                <div class="form-feedback__calendar-text-wrapper">
+                                    <div class="form-feedback__calendar-icon"></div>
+                                    <div class="form-feedback__error-clue">
+                                        <span class="form-feedback__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <p class="form-feedback__calendar-text">Выберите дату</p>
+                                </div>
+                                <input class="date input-container__input" id="date" name="form-1-calendar">
+                            </div>
+                            <button class="form-feedback__button button" type="submit">Заказать cъемку</button>
+                        </div>
+                    </div>
+                </form>
+                <form class="feedback__form form-feedback form-feedback_second" novalidate>
+                    <h3 class="form-feedback__title">Задай вопрос</h3>
+                    <div class="form-feedback__body">
+                        <div class="form-feedback__content">
+                            <div class="input-container">
+                                <div class="input-container__wrapper">
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-2-name" required>
+                                    <label class="input-container__label">Введите имя</label>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-container__wrapper">
+                                    <div class="input-container__icon"></div>
+                                    <div class="input-container__error-clue">
+                                        <span class="input-container__error-clue-text">Неверное имя</span>
+                                    </div>
+                                    <input class="input-container__input" name="form-2-number" required>
+                                    <label class="input-container__label">Введите номер</label>
+                                </div>
+                            </div>
+                            <div class="textarrea-container">
+                                <textarea class="textarrea-container__textarrea" required></textarea>
+                                <label class="textarrea-container__label">Введите сообщение</label>
+                            </div>
+                            <button class="form-feedback__button button">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="feedback__tabs">
+                <div class="feedback__tab tab-feedback tab-feedback_act">
+                    <h3 class="tab-feedback__title">Бронь съемки</h3>
+                    <p class="tab-feedback__text">Вы можете забронировать фотосессию на любой удобный вам день</p>
+                </div>
+                <div class="feedback__tab tab-feedback">
+                    <h3 class="tab-feedback__title">Любой вопрос</h3>
+                    <p class="tab-feedback__text">Вы можете задать любой вопрос и мы ответим вам в течении 10 минут</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         <section class="rewiews">
     <div class="container">
         <header class="rewiews__head">
@@ -605,84 +695,6 @@
                 <div class="rewiews-swiper__bullets">
 
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <section class="feedback">
-    <div class="container">
-        <header class="feedback__head">
-            <h2 class="feedback__title section-title">Обратная связь</h2>
-            <div class="feedback__change-form change-form">
-                <span class="change-form__title change-form__title_active">Забронировать</span>
-                <span class="change-form__title">Спросить</span>
-                <div class="change-form__line"></div>
-            </div>
-        </header>
-        <div class="feedback__wrapper">
-            <div class="feedback__content">
-                <form class="feedback__form form-feedback form-feedback_first">
-                    <h3 class="form-feedback__title">Забронируй съемку</h3>
-                    <div class="form-feedback__body">
-                        <div class="form-feedback__content">
-                            <div class="input-container">
-                                <div class="input-container__icon"></div>
-                                <div class="input-container__wrapper">
-                                    <input class="input-container__input" required>
-                                    <label class="input-container__label">Введите имя</label>
-                                </div>
-                            </div>
-                            <div class="input-container">
-                                <div class="input-container__icon input-container__icon_tel"></div>
-                                <div class="input-container__wrapper">
-                                    <input class="input-container__input" required>
-                                    <label class="input-container__label">Введите номер</label>
-                                </div>
-                            </div>
-                            <div class="form-feedback__calendar">
-                                <input class="date" id="date">
-                            </div>
-                            <button class="form-feedback__button button">Заказать cъемку</button>
-                        </div>
-                    </div>
-                </form>
-                <form class="feedback__form form-feedback form-feedback_second">
-                    <h3 class="form-feedback__title">Задай вопрос</h3>
-                    <div class="form-feedback__body">
-                        <div class="form-feedback__content">
-                            <div class="input-container">
-                                <div class="input-container__icon"></div>
-                                <div class="input-container__wrapper">
-                                    <input class="input-container__input" required>
-                                    <label class="input-container__label">Введите имя</label>
-                                </div>
-                            </div>
-                            <div class="input-container">
-                                <div class="input-container__icon input-container__icon_tel"></div>
-                                <div class="input-container__wrapper">
-                                    <input class="input-container__input" required>
-                                    <label class="input-container__label">Введите номер</label>
-                                </div>
-                            </div>
-                            <div class="textarrea-container">
-                                <textarea class="textarrea-container__textarrea" required></textarea>
-                                <label class="textarrea-container__label">Введите сообщение</label>
-                            </div>
-                            <button class="form-feedback__button button">Отправить</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="feedback__photo-wrapper">
-                <div class="feedback__photo">
-                    <img class="anim-img anim-img-right" src="./../../img/gallery-7.jpg">
-                </div>
-                <svg class="feedback__circle-text circle-text" viewBox="0 0 150 150">
-                    <path class="circle-text__path" id="circle-text" d="M 0,150 a 150,150 0 1,1 0,1 z" />
-                    <text>
-                      <textPath xlink:href="#circle-text">Nikita Efremov Nikita</textPath>
-                    </text>
-                </svg>
             </div>
         </div>
     </div>

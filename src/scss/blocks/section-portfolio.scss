@@ -26,7 +26,7 @@
         position: relative;
     }
     &__block{   
-        border: 2px solid rgb(127, 127, 138);
+        border: 2px solid $muted-bg-color;
         display: flex;
         overflow: hidden;
         border-top: none;
@@ -35,12 +35,12 @@
     &__block-num{
         width: 100%;
         text-align: center;
-        color: rgb(127, 127, 138);
+        color: $green-color;
         font-size: 20px;
         margin-top: 30px;
     }
     &__block:first-child{   
-        border-left: 2px solid rgb(127, 127, 138);
+        border-left: 2px solid $muted-bg-color;
     }
     &__img-link{
         position: absolute;
@@ -121,8 +121,9 @@
         text-transform: uppercase;
     }   
     &__link{
-        color: $light-color;
+        color: white;
         font-size: 18px;
+        margin-right: 25px;
     }
     @media (max-width:1200px) {
         &__wrapper{
