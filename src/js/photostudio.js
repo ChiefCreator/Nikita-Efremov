@@ -16,7 +16,18 @@ new AirDatepicker('#date', {
     }
 })
 new AirDatepicker('#date-form', {
-    inline: true
+    inline: true,
+    onSelect({date, formattedDate, datepicker}) {
+        let input = document.querySelector("#date-form");
+        let icon = input.parentElement.querySelector(".form-feedback__calendar-icon");
+        let clue = input.parentElement.querySelector(".form-feedback__error-clue");
+        if (input.value != "") {
+            icon.classList.remove("icon-error");
+            icon.addEventListener("mouseenter", function() {
+                clue.classList.remove("clue-error");
+            })
+        }
+    }
 })
 
 import feedback from "./modules/feedback";
